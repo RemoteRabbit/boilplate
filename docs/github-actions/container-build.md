@@ -1,0 +1,16 @@
+---
+title: Container build & push
+status: stub
+---
+
+# Container build & push
+
+!!! note "Stub page"
+    Build a multi-arch image, push to GHCR, sign with cosign.
+
+## Planned content
+
+- `docker/setup-buildx-action` + `docker/build-push-action` with cache
+- Multi-arch via `platforms: linux/amd64,linux/arm64` + QEMU
+- GHCR auth via `GITHUB_TOKEN`
+- Cosign keyless signing

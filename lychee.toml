@@ -1,0 +1,34 @@
+# Lychee link checker configuration.
+# https://lychee.cli.rs/usage/config/
+
+# Networking
+max_redirects     = 5
+max_concurrency   = 8
+timeout           = 20
+retry_wait_time   = 2
+max_retries       = 3
+
+# Treat anything 200-299, plus a few well-known transient codes, as success.
+# - 403/429: rate limits / WAFs that bounce headless clients
+# - 503: temporary service unavailable
+accept = ["200..=299", "403", "429", "503"]
+
+# Don't bother resolving these on every run.
+exclude = [
+    # localhost links in code samples
+    '^https?://(localhost|127\.0\.0\.1)',
+    '^http://0\.0\.0\.0',
+    # example/placeholder domains
+    '^https?://[^/]*example\.(com|org|net)',
+    'api\.example\.com',
+]
+
+# Ignore link fragments that come from anchor-link generators.
+# These exist on the rendered site, not in the source markdown lychee scans.
+include_fragments = false
+
+# Don't fail on `mailto:` schemes.
+exclude_mail = true
+
+# Honor .gitignore.
+no_progress = true

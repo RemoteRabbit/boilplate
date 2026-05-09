@@ -1,0 +1,24 @@
+---
+# https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+default: true
+
+# Line length — match other linters at 120, ignore code blocks/tables.
+MD013:
+  line_length: 120
+  code_blocks: false
+  tables: false
+  headings: false
+
+# Allow inline HTML (admonitions, <details>, etc. used by MkDocs Material).
+MD033: false
+
+# Allow duplicate headings under different parents (common in nav-heavy docs).
+MD024:
+  siblings_only: true
+
+# Don't require first line to be a top-level heading (MkDocs uses page titles
+# from nav).
+MD041: false
+
+# Bare URLs are fine; magiclink turns them into proper links.
+MD034: false

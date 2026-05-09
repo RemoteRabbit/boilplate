@@ -1,0 +1,54 @@
+name: Link check
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - 'lychee.toml'
+      - '.github/workflows/links.yml'
+  schedule:
+    - cron: '0 8 * * 1'  # Mondays 08:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write  # for the scheduled run that opens an issue on failure
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
+
+      - name: Run lychee
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config lychee.toml
+            --cache
+            --max-cache-age 7d
+            --base .
+            'docs/**/*.md'
+            'README.md'
+          fail: ${{ github.event_name == 'pull_request' }}
+          format: markdown
+          output: lychee-report.md
+
+      # On the weekly schedule, file a tracking issue on failure rather than
+      # failing the workflow loudly. PR runs already gate via `fail: true` above.
+      - name: Open issue on scheduled failure
+        if: ${{ github.event_name == 'schedule' && steps.lychee.outputs.exit_code != 0 }}
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Broken links found by lychee
+          content-filepath: lychee-report.md
+          labels: link-rot, automated
