@@ -23,9 +23,4 @@ exclude = [
     'api\.example\.com',
 ]
 
-# Ignore link fragments that come from anchor-link generators.
-# These exist on the rendered site, not in the source markdown lychee scans.
-include_fragments = false
-
-# Honor .gitignore.
 no_progress = true
