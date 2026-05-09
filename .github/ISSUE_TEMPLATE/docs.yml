@@ -1,0 +1,26 @@
+name: Docs issue
+description: Missing, incorrect, or unclear documentation.
+title: "docs: <short description>"
+labels: ["documentation"]
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page / file
+      description: Path under `docs/` or URL of the page.
+      placeholder: "docs/getting-started.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What's wrong or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested change
+      description: Optional. Wording, structure, or new section idea.
