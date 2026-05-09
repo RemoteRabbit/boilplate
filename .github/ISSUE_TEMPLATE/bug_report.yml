@@ -1,0 +1,59 @@
+name: Bug report
+description: Something is broken or behaving unexpectedly.
+title: "fix: <short description>"
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please include enough info to reproduce it.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened? What did you expect to happen?
+      placeholder: |
+        When I run `make docs` the build fails with ...
+        I expected the site to build successfully.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Minimal commands or actions that trigger the bug.
+      placeholder: |
+        1. Clone the repo
+        2. Run `uv sync`
+        3. Run `make docs`
+      render: bash
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / output
+      description: Paste any relevant error output. Sensitive values should be redacted.
+      render: text
+
+  - type: input
+    id: version
+    attributes:
+      label: Commit / version
+      description: Output of `git rev-parse --short HEAD` or release tag.
+
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, tool versions, etc.
+      placeholder: "Arch Linux, Python 3.12, uv 0.4.x"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Anything else worth mentioning.
