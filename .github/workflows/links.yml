@@ -47,7 +47,7 @@ jobs:
       # failing the workflow loudly. PR runs already gate via `fail: true` above.
       - name: Open issue on scheduled failure
         if: ${{ github.event_name == 'schedule' && steps.lychee.outputs.exit_code != 0 }}
-        uses: peter-evans/create-issue-from-file@v5
+        uses: peter-evans/create-issue-from-file@v6
         with:
           title: Broken links found by lychee
           content-filepath: lychee-report.md
