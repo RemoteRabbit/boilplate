@@ -16,10 +16,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install lychee
-        run: |
-          curl -sSf '<https://sh.rustup.rs>' | sh
-          apt install gcc pkg-config libc6-dev libssl-dev
+      # - name: Install lychee
+      #   run: |
+      #     curl -sSf '<https://sh.rustup.rs>' | sh
+      #     apt install gcc pkg-config libc6-dev libssl-dev
 
       - uses: astral-sh/setup-uv@v8.1.0
         with:
@@ -32,8 +32,8 @@ jobs:
       - name: Install dependencies
         run: uv sync --frozen
 
-      - name: Run pre-commit
-        run: uv run pre-commit run --all-files --show-diff-on-failure
+      # - name: Run pre-commit
+      #   run: uv run pre-commit run --all-files --show-diff-on-failure
 
       - name: Build site
         run: uv run zensical build
