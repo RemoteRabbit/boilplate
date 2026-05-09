@@ -1,6 +1,9 @@
 ---
 title: Container build & push
 status: stub
+tags:
+  - github-actions
+  - docker
 ---
 
 # Container build & push

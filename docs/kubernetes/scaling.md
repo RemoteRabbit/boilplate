@@ -1,6 +1,8 @@
 ---
 title: HPA / PDB / NetworkPolicy
 status: stub
+tags:
+  - kubernetes
 ---
 
 # HPA / PDB / NetworkPolicy

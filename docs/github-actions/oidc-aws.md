@@ -1,6 +1,9 @@
 ---
 title: OIDC → AWS (no static keys)
 status: stub
+tags:
+  - github-actions
+  - aws
 ---
 
 # OIDC → AWS (no static keys)

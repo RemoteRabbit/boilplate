@@ -1,6 +1,8 @@
 ---
 title: RBAC patterns
 status: stub
+tags:
+  - kubernetes
 ---
 
 # RBAC patterns

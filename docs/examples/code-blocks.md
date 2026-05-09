@@ -1,13 +1,15 @@
 ---
 title: Code block features
 description: Live demo of every code-block feature available on this site — syntax highlighting, titles, line numbers, line highlighting, annotations, diffs, tabs.
+tags:
+  - examples
 ---
 
 # Code block features
 
 A live tour of every code-block feature the site supports. Use this page as a
 reference when authoring boilerplate. Delete it whenever you don't want it
-anymore — it lives at [`docs/examples/code-blocks.md`][src] and is referenced
+anymore — it lives at `docs/examples/code-blocks.md` and is referenced
 in `nav:` only.
 
 ---

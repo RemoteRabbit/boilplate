@@ -1,6 +1,10 @@
 ---
 title: OIDC → GCP / Azure
 status: stub
+tags:
+  - github-actions
+  - gcp
+  - azure
 ---
 
 # OIDC → GCP / Azure

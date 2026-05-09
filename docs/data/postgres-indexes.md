@@ -1,6 +1,9 @@
 ---
 title: Postgres indexing & partitioning
 status: stub
+tags:
+  - data
+  - postgres
 ---
 
 # Postgres indexing & partitioning

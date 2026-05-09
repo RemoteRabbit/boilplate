@@ -1,6 +1,8 @@
 ---
 title: Compose dev stacks
 status: stub
+tags:
+  - docker
 ---
 
 # Compose dev stacks

@@ -1,6 +1,8 @@
 ---
 title: Explicit stacks (terragrunt.stack.hcl)
 status: stub
+tags:
+  - terragrunt
 ---
 
 # Explicit stacks (terragrunt.stack.hcl)

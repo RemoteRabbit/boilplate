@@ -1,6 +1,8 @@
 ---
 title: OpenAPI starter + lint
 status: stub
+tags:
+  - api
 ---
 
 # OpenAPI starter + lint

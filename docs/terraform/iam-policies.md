@@ -1,6 +1,9 @@
 ---
 title: IAM policy patterns
 status: stub
+tags:
+  - terraform
+  - aws
 ---
 
 # IAM policy patterns

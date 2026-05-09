@@ -1,6 +1,8 @@
 ---
 title: Distroless / chainguard images
 status: stub
+tags:
+  - docker
 ---
 
 # Distroless / chainguard images

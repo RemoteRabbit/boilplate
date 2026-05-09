@@ -1,6 +1,8 @@
 ---
 title: Reusable workflows
 status: stub
+tags:
+  - github-actions
 ---
 
 # Reusable workflows

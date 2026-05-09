@@ -1,6 +1,9 @@
 ---
 title: Postgres schema conventions
 status: stub
+tags:
+  - data
+  - postgres
 ---
 
 # Postgres schema conventions

@@ -1,6 +1,8 @@
 ---
 title: GitHub Actions
 status: stub
+tags:
+  - github-actions
 ---
 
 # GitHub Actions

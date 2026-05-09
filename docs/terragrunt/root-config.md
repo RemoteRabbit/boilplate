@@ -1,6 +1,8 @@
 ---
 title: root.hcl + env.hcl + unit pattern
 status: stub
+tags:
+  - terragrunt
 ---
 
 # root.hcl + env.hcl + unit pattern

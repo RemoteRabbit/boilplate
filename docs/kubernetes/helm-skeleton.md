@@ -1,6 +1,8 @@
 ---
 title: Helm chart skeleton
 status: stub
+tags:
+  - kubernetes
 ---
 
 # Helm chart skeleton

@@ -1,6 +1,9 @@
 ---
 title: Go chi service skeleton
 status: stub
+tags:
+  - api
+  - go
 ---
 
 # Go chi service skeleton

@@ -1,6 +1,9 @@
 ---
 title: Airflow TaskFlow DAG skeleton
 status: stub
+tags:
+  - data
+  - python
 ---
 
 # Airflow TaskFlow DAG skeleton

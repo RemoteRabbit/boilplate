@@ -1,6 +1,8 @@
 ---
 title: Observability
 status: stub
+tags:
+  - observability
 ---
 
 # Observability

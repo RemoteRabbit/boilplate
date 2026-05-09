@@ -1,6 +1,8 @@
 ---
 title: Structured logging
 status: stub
+tags:
+  - observability
 ---
 
 # Structured logging

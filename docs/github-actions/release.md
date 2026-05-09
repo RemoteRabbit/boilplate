@@ -1,6 +1,8 @@
 ---
 title: Release automation
 status: stub
+tags:
+  - github-actions
 ---
 
 # Release automation

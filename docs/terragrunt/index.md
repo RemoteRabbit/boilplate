@@ -1,6 +1,9 @@
 ---
 title: Terragrunt
 status: stub
+tags:
+  - terragrunt
+  - terraform
 ---
 
 # Terragrunt

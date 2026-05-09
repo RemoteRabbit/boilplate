@@ -1,6 +1,8 @@
 ---
 title: Repo hygiene
 status: stub
+tags:
+  - hygiene
 ---
 
 # Repo hygiene

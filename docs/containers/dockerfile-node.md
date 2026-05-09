@@ -1,6 +1,9 @@
 ---
 title: Node — multi-stage, pnpm
 status: stub
+tags:
+  - docker
+  - node
 ---
 
 # Node — multi-stage, pnpm

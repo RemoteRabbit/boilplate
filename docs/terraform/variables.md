@@ -1,6 +1,8 @@
 ---
 title: Common variables
 description: Reusable, well-validated Terraform / OpenTofu variable blocks for environment, region, tags, CIDRs, naming, and more.
+tags:
+  - terraform
 ---
 
 # Common variables
@@ -16,6 +18,63 @@ Drop-in `variable` blocks with `type`, `description`, sensible defaults, and
       `nullable = true` rather than empty strings, so missing values are explicit.
 
 ---
+
+# AWS
+
+## Region
+
+```hcl
+variable "aws_region" {
+  description = "AWS region to deploy into (e.g. us-east-1)."
+  type        = string
+  default     = "us-east-1"
+
+  validation {
+    condition     = can(regex("^(af|ap|ca|eu|me|sa|us|us-gov|cn)-[a-z]+-[0-9]+$", var.aws_region))
+    error_message = "aws_region must look like a valid AWS region code (e.g. us-east-1, eu-west-2, ap-southeast-1)."
+  }
+}
+```
+
+## Account ID
+
+```hcl
+variable "aws_account_id" {
+  type        = string
+  description = "The AWS account ID (12-digit number)."
+
+  validation {
+    condition     = can(regex("^[0-9]{12}$", var.aws_account_id))
+    error_message = "The aws_account_id must be exactly 12 digits (0-9), with no spaces, dashes, or other characters."
+  }
+}
+```
+
+!!! note "Hard character limit"
+    AWS account IDs are always exactly 12 numeric digits — anchoring with ^...$ rejects accidental whitespace or extra characters.
+
+!!! note "Why not number type"
+    Keep them as string, not number — leading zeros are valid in account IDs and number would strip them.
+
+## List of Account IDs
+
+```hcl
+variable "aws_account_ids" {
+  type        = list(string)
+  description = "A list of AWS account IDs (each a 12-digit number)."
+
+  validation {
+    condition     = alltrue([for id in var.aws_account_ids : can(regex("^[0-9]{12}$", id))])
+    error_message = "Each entry in aws_account_ids must be exactly 12 digits (0-9)."
+  }
+}
+```
+
+!!! note "Hard character limit"
+    AWS account IDs are always exactly 12 numeric digits — anchoring with ^...$ rejects accidental whitespace or extra characters.
+
+!!! note "Why not number type"
+    Keep them as string, not number — leading zeros are valid in account IDs and number would strip them.
 
 ## Environment
 
@@ -41,21 +100,6 @@ variable "project" {
   validation {
     condition     = can(regex("^[a-z][a-z0-9-]{1,23}$", var.project))
     error_message = "project must start with a lowercase letter and contain only lowercase letters, digits, or hyphens (2–24 chars)."
-  }
-}
-```
-
-## AWS region
-
-```hcl
-variable "aws_region" {
-  description = "AWS region to deploy into (e.g. us-east-1)."
-  type        = string
-  default     = "us-east-1"
-
-  validation {
-    condition     = can(regex("^(af|ap|ca|eu|me|sa|us|us-gov|cn)-[a-z]+-[0-9]+$", var.aws_region))
-    error_message = "aws_region must look like a valid AWS region code (e.g. us-east-1, eu-west-2, ap-southeast-1)."
   }
 }
 ```

@@ -1,6 +1,8 @@
 ---
 title: Data
 status: stub
+tags:
+  - data
 ---
 
 # Data

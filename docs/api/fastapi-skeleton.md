@@ -1,6 +1,10 @@
 ---
 title: FastAPI service skeleton
 status: stub
+tags:
+  - api
+  - python
+  - fastapi
 ---
 
 # FastAPI service skeleton

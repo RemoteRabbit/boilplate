@@ -1,6 +1,9 @@
 ---
 title: Prometheus naming + RED/USE
 status: stub
+tags:
+  - observability
+  - prometheus
 ---
 
 # Prometheus naming + RED/USE

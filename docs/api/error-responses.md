@@ -1,6 +1,8 @@
 ---
 title: RFC 7807 problem+json
 status: stub
+tags:
+  - api
 ---
 
 # RFC 7807 problem+json

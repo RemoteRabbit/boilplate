@@ -1,6 +1,8 @@
 ---
 title: .gitignore by stack
 status: stub
+tags:
+  - hygiene
 ---
 
 # .gitignore by stack

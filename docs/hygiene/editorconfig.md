@@ -1,6 +1,8 @@
 ---
 title: .editorconfig
 status: stub
+tags:
+  - hygiene
 ---
 
 # .editorconfig

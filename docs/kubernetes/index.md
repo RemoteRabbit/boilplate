@@ -1,6 +1,8 @@
 ---
 title: Kubernetes
 status: stub
+tags:
+  - kubernetes
 ---
 
 # Kubernetes
