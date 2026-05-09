@@ -22,3 +22,10 @@ MD041: false
 
 # Bare URLs are fine; magiclink turns them into proper links.
 MD034: false
+
+# MkDocs Material pages use frontmatter `title:` AND an H1 by convention.
+MD025: false
+
+# Fenced code blocks inside admonitions / content tabs (`!!!`, `===`) are
+# indented by pymdownx, which markdownlint misreads as indented code blocks.
+MD046: false
