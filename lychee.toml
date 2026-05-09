@@ -27,8 +27,5 @@ exclude = [
 # These exist on the rendered site, not in the source markdown lychee scans.
 include_fragments = false
 
-# Don't fail on `mailto:` schemes.
-exclude_mail = true
-
 # Honor .gitignore.
 no_progress = true
