@@ -10,8 +10,6 @@ reference when authoring boilerplate. Delete it whenever you don't want it
 anymore — it lives at [`docs/examples/code-blocks.md`][src] and is referenced
 in `nav:` only.
 
-[src]: https://github.com/RemoteRabbit/boilplate/blob/main/docs/examples/code-blocks.md
-
 ---
 
 ## 1. Plain syntax highlighting
@@ -158,9 +156,9 @@ variable "vpc_cidr" {
 }
 ```
 
-1.  Custom validation runs at `terraform plan` time. Multiple `validation`
+1. Custom validation runs at `terraform plan` time. Multiple `validation`
     blocks per variable are allowed and evaluated independently.
-2.  The `can()` wrapper turns a parse exception into `false`, which is what
+2. The `can()` wrapper turns a parse exception into `false`, which is what
     `condition` expects. Without it, an invalid CIDR would crash the plan
     instead of producing a clean error message.
 
@@ -182,11 +180,11 @@ class Settings(BaseSettings):
     log_level: str = "INFO"
 ```
 
-1.  `model_config` replaces the old `class Config:` style in pydantic v2.
+1. `model_config` replaces the old `class Config:` style in pydantic v2.
     See the [pydantic-settings docs](https://docs.pydantic.dev/latest/concepts/pydantic_settings/)
     for every option.
 
-2.  No default → required. Set it via the environment:
+2. No default → required. Set it via the environment:
 
     ```bash
     export APP_DATABASE_URL=postgresql://localhost/app
@@ -346,13 +344,13 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "this" { # (3)!
 }
 ```
 
-1.  Compose the bucket name from `local`s rather than inlining the format
+1. Compose the bucket name from `local`s rather than inlining the format
     string everywhere. Keep the naming logic in one place.
 
-2.  **Always** attach a public-access block. AWS makes this opt-in per bucket,
+2. **Always** attach a public-access block. AWS makes this opt-in per bucket,
     and the default leaves you exposed if a misconfigured policy slips
     through.
 
-3.  Server-side encryption is now on by default for new buckets, but pinning
+3. Server-side encryption is now on by default for new buckets, but pinning
     the algorithm explicitly makes intent clear and lets you use a customer
     KMS key when `var.kms_key_arn` is set.
