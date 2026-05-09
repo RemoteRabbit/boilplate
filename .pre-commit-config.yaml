@@ -33,9 +33,16 @@ repos:
 
   - repo: local
     hooks:
-      - id: mkdocs-build
-        name: mkdocs build (strict)
-        entry: uv run mkdocs build --strict --quiet
+      - id: zensical-build
+        name: zensical build
+        entry: uv run zensical build
         language: system
         pass_filenames: false
-        files: ^(docs/|mkdocs\.yml|pyproject\.toml)
+        files: ^(docs/|zensical\.toml|pyproject\.toml)
+
+      - id: lychee
+        name: lychee link check
+        entry: lychee --config lychee.toml --cache --max-cache-age 7d --no-progress
+        language: system
+        pass_filenames: true
+        files: \.md$
