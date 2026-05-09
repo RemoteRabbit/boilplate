@@ -1,6 +1,8 @@
 ---
 title: Provider configuration
 status: stub
+tags:
+  - terraform
 ---
 
 # Provider configuration

@@ -1,0 +1,300 @@
+# ---------------------------------------------------------------------------
+# Zensical project configuration.
+# Schema: https://zensical.org/docs/setup/
+# ---------------------------------------------------------------------------
+
+[project]
+site_name        = "boilplate"
+site_description = "Copy-paste-ready boilerplate for things you keep rewriting."
+site_url         = "https://remoterabbit.github.io/boilplate/"
+site_author      = "RemoteRabbit"
+copyright        = "Copyright &copy; RemoteRabbit · Built with Zensical"
+docs_dir         = "docs"
+repo_name        = "RemoteRabbit/boilplate"
+repo_url         = "https://github.com/RemoteRabbit/boilplate"
+edit_uri         = "edit/main/docs/"
+extra_css        = ["assets/extra.css"]
+extra_javascript = ["assets/external-links.js"]
+nav = [
+  { Home = "index.md" },
+  { Examples = [
+      { "Code block features" = "examples/code-blocks.md" },
+  ] },
+  { "Terraform / OpenTofu" = [
+      "terraform/index.md",
+      { "Common variables"      = "terraform/variables.md" },
+      { "Module skeleton"       = "terraform/module-skeleton.md" },
+      { Backends                = "terraform/backends.md" },
+      { "Provider configuration" = "terraform/providers.md" },
+      { "IAM policy patterns"   = "terraform/iam-policies.md" },
+  ] },
+  { Terragrunt = [
+      "terragrunt/index.md",
+      { "root.hcl + env.hcl + unit" = "terragrunt/root-config.md" },
+      { "Explicit stacks"           = "terragrunt/stacks.md" },
+  ] },
+  { "GitHub Actions" = [
+      "github-actions/index.md",
+      { "Reusable workflows"   = "github-actions/reusable-workflows.md" },
+      { "OIDC → AWS"           = "github-actions/oidc-aws.md" },
+      { "OIDC → GCP / Azure"   = "github-actions/oidc-gcp-azure.md" },
+      { "Container build & push" = "github-actions/container-build.md" },
+      { "Release automation"   = "github-actions/release.md" },
+      { "Path-filtered matrix" = "github-actions/path-filtered-matrix.md" },
+  ] },
+  { Containers = [
+      "containers/index.md",
+      { "Python (uv, multi-stage)" = "containers/dockerfile-python.md" },
+      { "Go (static, distroless)"  = "containers/dockerfile-go.md" },
+      { "Node (pnpm, multi-stage)" = "containers/dockerfile-node.md" },
+      { "Distroless / chainguard"  = "containers/distroless.md" },
+      { "Compose dev stacks"       = "containers/compose-dev.md" },
+  ] },
+  { Kubernetes = [
+      "kubernetes/index.md",
+      { "Deployment baseline"      = "kubernetes/deployment-baseline.md" },
+      { "Probes done right"        = "kubernetes/probes.md" },
+      { "HPA / PDB / NetworkPolicy" = "kubernetes/scaling.md" },
+      { "RBAC patterns"            = "kubernetes/rbac.md" },
+      { "Helm chart skeleton"      = "kubernetes/helm-skeleton.md" },
+  ] },
+  { "API / Backend" = [
+      "api/index.md",
+      { "FastAPI skeleton" = "api/fastapi-skeleton.md" },
+      { "Go chi skeleton"  = "api/go-chi-skeleton.md" },
+      { "RFC 7807 errors"  = "api/error-responses.md" },
+      { Pagination         = "api/pagination.md" },
+      { "OpenAPI starter"  = "api/openapi.md" },
+  ] },
+  { Data = [
+      "data/index.md",
+      { "Postgres conventions" = "data/postgres-conventions.md" },
+      { "Postgres indexing"    = "data/postgres-indexes.md" },
+      { "Alembic skeleton"     = "data/alembic-skeleton.md" },
+      { "dbt skeleton"         = "data/dbt-skeleton.md" },
+      { "Airflow DAG skeleton" = "data/airflow-dag.md" },
+  ] },
+  { Observability = [
+      "observability/index.md",
+      { "Structured logging"  = "observability/structured-logging.md" },
+      { OpenTelemetry         = "observability/opentelemetry.md" },
+      { "Prometheus + RED/USE" = "observability/prometheus.md" },
+  ] },
+  { "Repo hygiene" = [
+      "hygiene/index.md",
+      { ".gitignore by stack" = "hygiene/gitignore.md" },
+      { ".editorconfig"       = "hygiene/editorconfig.md" },
+      { "pre-commit configs"  = "hygiene/pre-commit.md" },
+      { "Makefile patterns"   = "hygiene/makefile.md" },
+  ] },
+]
+
+# ---------------------------------------------------------------------------
+# Theme
+# ---------------------------------------------------------------------------
+
+[project.theme]
+name     = "material"
+# "classic" matches Material for MkDocs look-and-feel; "modern" is Zensical's
+# new design. Our extra.css targets Material's --md-* variables, so use classic.
+# https://zensical.org/docs/setup/basics/#theme-variant
+variant  = "classic"
+language = "en"
+favicon  = "assets/favicon.ico"
+logo     = "assets/favicon.svg"
+features = [
+  # Header / announcements
+  "header.autohide",
+  "announce.dismiss",
+  # Navigation
+  "navigation.instant",
+  "navigation.instant.prefetch",
+  "navigation.instant.progress",
+  "navigation.tracking",
+  "navigation.tabs",
+  "navigation.tabs.sticky",
+  "navigation.sections",
+  "navigation.indexes",
+  "navigation.path",      # breadcrumbs
+  "navigation.prune",     # only render visible sidebar entries (perf)
+  "navigation.top",
+  "navigation.footer",
+  "toc.follow",
+  # Search
+  "search.suggest",
+  "search.highlight",
+  "search.share",
+  # Content
+  "content.code.copy",
+  "content.code.annotate",
+  "content.code.select",
+  "content.tabs.link",
+  "content.tooltips",
+  "content.footnote.tooltips",
+  "content.action.edit",
+  "content.action.view",
+]
+
+[project.theme.font]
+text = "Inter"
+code = "JetBrains Mono"
+
+[project.theme.icon]
+repo = "fontawesome/brands/github"
+edit = "material/pencil"
+view = "material/eye"
+
+# Tag identifiers + icons. Add `tags: [terraform, aws]` to a page's
+# front-matter to use them. https://zensical.org/docs/setup/tags/
+[project.theme.icon.tag]
+default       = "lucide/hash"
+# Section tags (one per nav top-level section)
+examples      = "lucide/code-2"
+api           = "lucide/plug"
+data          = "lucide/database"
+observability = "lucide/activity"
+hygiene       = "lucide/sparkles"
+# Tool / provider tags
+terraform     = "fontawesome/brands/hashnode"
+terragrunt    = "fontawesome/brands/hashnode"
+aws           = "fontawesome/brands/aws"
+gcp           = "fontawesome/brands/google"
+azure         = "fontawesome/brands/microsoft"
+github        = "fontawesome/brands/github"
+github-actions = "fontawesome/brands/github"
+docker        = "fontawesome/brands/docker"
+kubernetes    = "simple/kubernetes"
+python        = "fontawesome/brands/python"
+go            = "fontawesome/brands/golang"
+node          = "fontawesome/brands/node-js"
+postgres      = "simple/postgresql"
+fastapi       = "simple/fastapi"
+prometheus    = "simple/prometheus"
+opentelemetry = "simple/opentelemetry"
+
+# Custom admonition icons (octicons set, slightly more distinctive than the
+# defaults). https://zensical.org/docs/authoring/admonitions/
+[project.theme.icon.admonition]
+note      = "octicons/tag-16"
+abstract  = "octicons/checklist-16"
+info      = "octicons/info-16"
+tip       = "octicons/squirrel-16"
+success   = "octicons/check-16"
+question  = "octicons/question-16"
+warning   = "octicons/alert-16"
+failure   = "octicons/x-circle-16"
+danger    = "octicons/zap-16"
+bug       = "octicons/bug-16"
+example   = "octicons/beaker-16"
+quote     = "octicons/quote-16"
+
+# ---- palette: auto / light / dark -----------------------------------------
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "material/brightness-auto"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media   = "(prefers-color-scheme: light)"
+scheme  = "default"
+primary = "custom"
+accent  = "custom"
+toggle.icon = "material/brightness-7"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media   = "(prefers-color-scheme: dark)"
+scheme  = "slate"
+primary = "custom"
+accent  = "custom"
+toggle.icon = "material/brightness-4"
+toggle.name = "Switch to system preference"
+
+# ---------------------------------------------------------------------------
+# Markdown extensions
+# Mirrors the canonical default from
+# https://zensical.org/docs/setup/extensions/
+# ---------------------------------------------------------------------------
+
+[project.markdown_extensions.abbr]
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.attr_list]
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+[project.markdown_extensions.tables]
+
+[project.markdown_extensions.toc]
+permalink       = true
+permalink_title = "Anchor link to this section"
+
+[project.markdown_extensions.pymdownx.betterem]
+[project.markdown_extensions.pymdownx.caret]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.keys]
+[project.markdown_extensions.pymdownx.mark]
+[project.markdown_extensions.pymdownx.smartsymbols]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.tilde]
+
+[project.markdown_extensions.pymdownx.emoji]
+emoji_index     = "zensical.extensions.emoji.twemoji"
+emoji_generator = "zensical.extensions.emoji.to_svg"
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums     = true
+line_spans          = "__span"
+pygments_lang_class = true
+auto_title          = false
+
+[project.markdown_extensions.pymdownx.magiclink]
+repo_url_shorthand = true
+user               = "RemoteRabbit"
+repo               = "boilplate"
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+
+[project.markdown_extensions.pymdownx.tabbed]
+alternate_style     = true
+combine_header_slug = true
+slugify             = { object = "pymdownx.slugs.slugify", kwds = { case = "lower" } }
+
+[project.markdown_extensions.pymdownx.tasklist]
+custom_checkbox = true
+
+# Image captions via the blocks extension. Use as: /// caption | Text \n ![](path) \n ///
+# https://zensical.org/docs/authoring/images/
+[project.markdown_extensions.pymdownx.blocks.caption]
+
+# Image lightbox / zoom. Auto-applies to all <img> tags by default.
+# https://zensical.org/docs/setup/extensions/glightbox/
+[project.markdown_extensions.zensical.extensions.glightbox]
+
+# ---------------------------------------------------------------------------
+# Extra
+# ---------------------------------------------------------------------------
+
+[project.extra]
+generator = false
+
+# ---------------------------------------------------------------------------
+# Plugins
+# ---------------------------------------------------------------------------
+
+# Offline usage — makes site search work when serving via file:// (downloads,
+# air-gapped envs, distributing alongside a product).
+# https://zensical.org/docs/setup/offline/
+#
+# Caveat: features that rely on `fetch` won't work from the file system.
+# When *distributing* the build for offline use, also disable
+# `navigation.instant*`, repo links, analytics, and comment systems.
+[project.plugins.offline]
+
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/RemoteRabbit"

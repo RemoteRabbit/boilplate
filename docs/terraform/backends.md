@@ -1,6 +1,9 @@
 ---
 title: Remote state backends
 status: stub
+tags:
+  - terraform
+  - aws
 ---
 
 # Remote state backends

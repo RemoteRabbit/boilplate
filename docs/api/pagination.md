@@ -1,6 +1,8 @@
 ---
 title: Pagination — cursor vs offset
 status: stub
+tags:
+  - api
 ---
 
 # Pagination — cursor vs offset

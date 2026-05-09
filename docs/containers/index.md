@@ -1,6 +1,8 @@
 ---
 title: Containers
 status: stub
+tags:
+  - docker
 ---
 
 # Containers

@@ -1,6 +1,9 @@
 ---
 title: OpenTelemetry init
 status: stub
+tags:
+  - observability
+  - opentelemetry
 ---
 
 # OpenTelemetry init

@@ -1,6 +1,8 @@
 ---
 title: Deployment + Service + Ingress baseline
 status: stub
+tags:
+  - kubernetes
 ---
 
 # Deployment + Service + Ingress baseline

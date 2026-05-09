@@ -1,6 +1,8 @@
 ---
 title: dbt project skeleton
 status: stub
+tags:
+  - data
 ---
 
 # dbt project skeleton

@@ -1,6 +1,8 @@
 ---
 title: Module skeleton
 status: stub
+tags:
+  - terraform
 ---
 
 # Module skeleton

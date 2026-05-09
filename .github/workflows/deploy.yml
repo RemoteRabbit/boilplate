@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - 'docs/**'
-      - 'mkdocs.yml'
+      - 'zensical.toml'
       - 'pyproject.toml'
       - 'uv.lock'
       - '.github/workflows/deploy.yml'
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
         with:
-          fetch-depth: 0  # needed for git-revision-date-localized
+          fetch-depth: 1
 
       - uses: astral-sh/setup-uv@v8.1.0
         with:
@@ -40,7 +40,8 @@ jobs:
         run: uv sync --frozen --no-dev
 
       - name: Build site
-        run: uv run mkdocs build --strict
+        # See ci.yml for why --strict is disabled.
+        run: uv run zensical build
 
       - uses: actions/configure-pages@v6
 

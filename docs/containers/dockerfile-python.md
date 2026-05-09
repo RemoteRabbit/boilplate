@@ -1,6 +1,9 @@
 ---
 title: Python — multi-stage with uv
 status: stub
+tags:
+  - docker
+  - python
 ---
 
 # Python — multi-stage with uv

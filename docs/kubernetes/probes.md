@@ -1,6 +1,8 @@
 ---
 title: Probes done right
 status: stub
+tags:
+  - kubernetes
 ---
 
 # Probes done right

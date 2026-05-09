@@ -8,11 +8,13 @@ license = { file = "LICENSE" }
 authors = [{ name = "RemoteRabbit" }]
 
 dependencies = [
-    "mkdocs>=1.6,<2.0",
-    "mkdocs-material>=9.5,<10.0",
+    # Zensical replaces mkdocs + mkdocs-material (built by the same team).
+    # Pinned to a known-good alpha; bump deliberately.
+    "zensical==0.0.40",
     "pymdown-extensions>=10.17.1,<12.0",
-    "mkdocs-git-revision-date-localized-plugin>=1.3,<2.0",
-    "mkdocs-htmlproofer-plugin>=1.3,<2.0",
+    # Note: git-revision-date-localized and htmlproofer plugins are not yet
+    # supported by Zensical (alpha, Phase 1). Link-checking is handled by the
+    # `links.yml` workflow via lychee.
 ]
 
 [dependency-groups]

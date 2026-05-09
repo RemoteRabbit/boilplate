@@ -1,6 +1,8 @@
 ---
 title: Makefile patterns
 status: stub
+tags:
+  - hygiene
 ---
 
 # Makefile patterns

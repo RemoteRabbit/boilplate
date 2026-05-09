@@ -1,6 +1,8 @@
 ---
 title: pre-commit configs
 status: stub
+tags:
+  - hygiene
 ---
 
 # pre-commit configs

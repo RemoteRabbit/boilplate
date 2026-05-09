@@ -1,6 +1,8 @@
 ---
 title: Path-filtered matrix builds
 status: stub
+tags:
+  - github-actions
 ---
 
 # Path-filtered matrix builds

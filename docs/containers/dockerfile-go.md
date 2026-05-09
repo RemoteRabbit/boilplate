@@ -1,6 +1,9 @@
 ---
 title: Go — static binary, distroless
 status: stub
+tags:
+  - docker
+  - go
 ---
 
 # Go — static binary, distroless

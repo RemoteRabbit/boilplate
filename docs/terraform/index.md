@@ -1,5 +1,7 @@
 ---
 title: Terraform / OpenTofu
+tags:
+  - terraform
 ---
 
 # Terraform / OpenTofu

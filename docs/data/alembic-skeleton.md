@@ -1,6 +1,10 @@
 ---
 title: Alembic migration skeleton
 status: stub
+tags:
+  - data
+  - python
+  - postgres
 ---
 
 # Alembic migration skeleton
