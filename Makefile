@@ -66,14 +66,21 @@ links: ## Run lychee link checker against docs/ and README. Requires lychee in P
 
 # ---- quality ---------------------------------------------------------------
 
-.PHONY: lint
-lint: install ## Run ruff lint.
-	$(RUN) ruff check .
+.PHONY: md-lint
+md-lint: ## Lint Markdown with markdownlint-cli2 (uses .markdownlint.yaml). Requires npx.
+	@command -v npx >/dev/null 2>&1 || { \
+		echo "error: 'npx' is not installed (install Node.js)."; \
+		exit 1; \
+	}
+	npx --yes markdownlint-cli2 "docs/**/*.md" "README.md"
 
-.PHONY: format
-format: install ## Format Python files with ruff.
-	$(RUN) ruff format .
-	$(RUN) ruff check --fix .
+.PHONY: md-fmt
+md-fmt: ## Auto-fix Markdown with markdownlint-cli2 --fix (safe with MkDocs Material syntax).
+	@command -v npx >/dev/null 2>&1 || { \
+		echo "error: 'npx' is not installed (install Node.js)."; \
+		exit 1; \
+	}
+	npx --yes markdownlint-cli2 --fix "docs/**/*.md" "README.md"
 
 .PHONY: hooks
 hooks: install ## Install pre-commit git hooks.
@@ -82,19 +89,6 @@ hooks: install ## Install pre-commit git hooks.
 .PHONY: pre-commit
 pre-commit: install ## Run all pre-commit hooks against every file.
 	$(RUN) pre-commit run --all-files
-
-# ---- terraform / opentofu --------------------------------------------------
-
-.PHONY: tf-fmt
-tf-fmt: ## Format all Terraform / OpenTofu files in-tree.
-	@command -v terraform >/dev/null 2>&1 && terraform fmt -recursive terragrunt || \
-		(command -v tofu >/dev/null 2>&1 && tofu fmt -recursive terragrunt) || \
-		(echo "neither terraform nor tofu is installed" >&2; exit 1)
-
-.PHONY: tg-fmt
-tg-fmt: ## Format all Terragrunt HCL files in-tree.
-	@command -v terragrunt >/dev/null 2>&1 || (echo "terragrunt is not installed" >&2; exit 1)
-	terragrunt hcl format
 
 # ---- housekeeping ----------------------------------------------------------
 
