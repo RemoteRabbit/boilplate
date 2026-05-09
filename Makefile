@@ -49,11 +49,11 @@ upgrade: check-uv ## Upgrade all dependencies to the latest allowed versions.
 
 .PHONY: serve
 serve: install ## Run the docs site locally with live reload (http://localhost:$(PORT)).
-	$(RUN) mkdocs serve -a 0.0.0.0:$(PORT)
+	$(RUN) zensical serve -a 0.0.0.0:$(PORT)
 
 .PHONY: build
-build: install ## Build the static site into ./site (strict mode + htmlproofer).
-	$(RUN) mkdocs build --strict
+build: install ## Build the static site into ./site (strict mode).
+	$(RUN) zensical build --strict
 
 .PHONY: links
 links: ## Run lychee link checker against docs/ and README. Requires lychee in PATH.
