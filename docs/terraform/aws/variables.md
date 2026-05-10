@@ -100,7 +100,7 @@ variable "project" {
 
 ## Tags (with required keys)
 
-Validates the map *and* enforces that specific keys are present — useful for
+Validates the map *and* enforces that specific keys are present useful for
 governance / cost-allocation tags.
 
 ```hcl

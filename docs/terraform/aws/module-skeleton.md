@@ -117,7 +117,7 @@ automatically, so the module only needs to set tags it specifically owns
 
 ## `examples/basic/main.tf`
 
-Every example is a *real, applyable* root module — not a snippet. CI should
+Every example is a *real, applyable* root module not a snippet. CI should
 `terraform init && terraform validate` every example on every PR.
 
 ```hcl
@@ -293,12 +293,12 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-| Hook                | What it does                                                            |
-| ------------------- | ----------------------------------------------------------------------- |
-| `terraform_fmt`     | `terraform fmt -recursive` — canonical whitespace and key alignment.     |
-| `terraform_validate`| `terraform validate` against every module and example.                  |
-| `terraform_tflint`  | Provider-aware linter; catches deprecated arguments and bad AMI IDs.    |
-| `terraform_docs`    | Regenerates the inputs / outputs table inside the README markers.       |
+| Hook                 | What it does                                                         |
+| -------------------- | -------------------------------------------------------------------- |
+| `terraform_fmt`      | `terraform fmt -recursive` canonical whitespace and key alignment.   |
+| `terraform_validate` | `terraform validate` against every module and example.               |
+| `terraform_tflint`   | Provider-aware linter; catches deprecated arguments and bad AMI IDs. |
+| `terraform_docs`     | Regenerates the inputs / outputs table inside the README markers.    |
 
 ---
 

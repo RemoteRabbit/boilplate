@@ -40,7 +40,7 @@ terraform {
 
 !!! tip "Commit the lockfile"
     `terraform init` writes `.terraform.lock.hcl` with checksums for every
-    provider. Always commit it — it's the only thing keeping you from a
+    provider. Always commit it, it's the only thing keeping you from a
     silent supply-chain change.
 
 ---

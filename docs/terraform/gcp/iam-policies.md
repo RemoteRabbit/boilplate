@@ -16,11 +16,11 @@ will silently wipe other teams' access. Read this page before you reach for
 
 ## `_iam_member` vs `_iam_binding` vs `_iam_policy`
 
-| Resource family            | Scope                                       | Authoritative? | Safe default? |
-| -------------------------- | ------------------------------------------- | -------------- | ------------- |
-| `google_*_iam_member`      | Single (role, member) pair                  | No — additive  | ✅ Yes         |
-| `google_*_iam_binding`     | Whole role (all members for that one role)  | Yes — for the role | ⚠️ Only if Terraform owns *that role* |
-| `google_*_iam_policy`      | The entire resource's IAM policy             | Yes — total    | ❌ Almost never |
+| Resource family        | Scope                                       | Authoritative?     | Safe default?                         |
+| ---------------------- | ------------------------------------------- | ------------------ | ------------------------------------- |
+| `google_*_iam_member`  | Single (role, member) pair                  | No — additive      | ✅ Yes                                |
+| `google_*_iam_binding` | Whole role (all members for that one role)  | Yes — for the role | ⚠️ Only if Terraform owns *that role* |
+| `google_*_iam_policy`  | The entire resource's IAM policy            | Yes — total        | ❌ Almost never                       |
 
 !!! warning "`google_project_iam_policy` is destructive"
     `google_project_iam_policy` overwrites **every** binding on the project,
@@ -121,7 +121,7 @@ many projects.
 
 ## Workload Identity Federation for GitHub Actions
 
-Trade GitHub's OIDC token for a short-lived Google access token — no
+Trade GitHub's OIDC token for a short-lived Google access token, no
 service-account JSON keys.
 
 ```hcl
@@ -218,10 +218,16 @@ deploy SA says *what they can do*, and rotating one doesn't disturb the other.
 
 ## References
 
-- [google_project_iam_*](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam) — member vs binding vs policy
-- [google_project_iam_custom_role](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam_custom_role)
-- [google_iam_workload_identity_pool](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/iam_workload_identity_pool)
-- [google_iam_workload_identity_pool_provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/iam_workload_identity_pool_provider)
-- [GCP: Workload Identity Federation with GitHub](https://cloud.google.com/iam/docs/workload-identity-federation-with-deployment-pipelines)
+- [google_project_iam_*][gpi-resources] — member vs binding vs policy
+- [google_project_iam_custom_role][gpi-custom-role]
+- [google_iam_workload_identity_pool][wif-pool]
+- [google_iam_workload_identity_pool_provider][wif-provider]
+- [GCP: Workload Identity Federation with GitHub][wif-github]
 - [GCP: Service account impersonation](https://cloud.google.com/iam/docs/service-account-impersonation)
 - [GCP: Understanding custom roles](https://cloud.google.com/iam/docs/understanding-custom-roles)
+
+[gpi-resources]: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam
+[gpi-custom-role]: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/google_project_iam_custom_role
+[wif-pool]: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/iam_workload_identity_pool
+[wif-provider]: https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/iam_workload_identity_pool_provider
+[wif-github]: https://cloud.google.com/iam/docs/workload-identity-federation-with-deployment-pipelines

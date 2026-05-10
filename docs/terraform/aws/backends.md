@@ -184,7 +184,7 @@ terraform init -migrate-state
 
 …and Terraform will copy the local state into the bucket it just created. If
 the bootstrap module needs to manage *its own* state going forward, also
-import the bucket and KMS key into the new state — though many teams treat
+import the bucket and KMS key into the new state though many teams treat
 the bootstrap state as a one-shot artifact and check it into a private
 repository instead.
 

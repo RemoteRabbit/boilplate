@@ -241,8 +241,8 @@ resource "aws_s3_bucket_policy" "this" {
 ## KMS key policy: Admin / Use / Grant separation
 
 A common mistake is granting `kms:*` to the root principal and calling it a
-day. Splitting the policy into three roles — **administer**, **use**, and
-**grant** — makes audits actually possible.
+day. Splitting the policy into three roles: **administer**, **use**, and
+**grant**. Makes audits actually possible.
 
 ```hcl
 data "aws_caller_identity" "current" {}

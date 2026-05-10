@@ -84,7 +84,7 @@ variable "environment" {
 
 ## Project / application name
 
-A short naming prefix used for resources — distinct from the GCP `project_id`.
+A short naming prefix used for resources, distinct from the GCP `project_id`.
 
 ```hcl
 variable "project" {

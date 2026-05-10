@@ -83,6 +83,6 @@ If you're coming from older Terragrunt:
 
 ## References
 
-- [Terragrunt docs home](https://terragrunt.gruntwork.io/docs/)
+- [Terragrunt docs home](https://docs.terragrunt.com/getting-started/quick-start/)
 - [Migrating to `root.hcl`](https://terragrunt.gruntwork.io/docs/migrate/migrating-from-root-terragrunt-hcl/)
 - [CLI reference](https://terragrunt.gruntwork.io/docs/reference/cli-options/)

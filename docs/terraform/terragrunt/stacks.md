@@ -195,6 +195,6 @@ an existing 3-file repo to stacks one environment at a time.
 ## References
 
 - [Stacks overview](https://terragrunt.gruntwork.io/docs/features/stacks/)
-- [`terragrunt.stack.hcl` reference](https://terragrunt.gruntwork.io/docs/reference/stack/)
-- [`terragrunt stack` CLI](https://terragrunt.gruntwork.io/docs/reference/cli/commands/stack/)
+- [`terragrunt.stack.hcl` reference](https://docs.terragrunt.com/reference/config-blocks-and-attributes/#stack)
+- [`terragrunt stack` CLI](https://terragrunt.gruntwork.io/docs/reference/cli/commands/stack/run/)
 - [Infrastructure catalog pattern](https://terragrunt.gruntwork.io/docs/features/catalog/)

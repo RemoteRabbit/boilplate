@@ -49,7 +49,7 @@ terraform {
 ```
 
 If `encryption_key` is omitted, GCS encrypts state with Google-managed keys.
-Either is fine — pick CMEK only when policy demands it.
+Either is fine, pick CMEK only when policy demands it.
 
 ## State versioning
 

@@ -181,7 +181,7 @@ output "github_actions_env" {
 ```
 
 !!! tip "Subject claim format"
-    `subject` is matched literally — there is no glob support. Add one
+    `subject` is matched literally, there is no glob support. Add one
     federated credential per ref pattern you want to trust:
 
     | Use case            | Subject                                          |

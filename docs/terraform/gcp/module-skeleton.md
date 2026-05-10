@@ -12,7 +12,7 @@ A minimal, opinionated layout for a reusable GCP module. Targets
 **Terraform ≥ 1.3** / **OpenTofu ≥ 1.6** and the **google / google-beta**
 providers ≥ 6.0.
 
-```
+```text
 modules/gcs-bucket/
 ├── README.md
 ├── versions.tf
@@ -233,7 +233,7 @@ terraform test
 
 ## README structure
 
-Generate the inputs/outputs tables from source — never hand-maintain them:
+Generate the inputs/outputs tables from source, never hand-maintain them:
 
 ```bash
 terraform-docs markdown table --output-file README.md --output-mode inject .

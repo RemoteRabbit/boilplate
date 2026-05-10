@@ -40,8 +40,15 @@ terraform {
 !!! note "Locking"
     The azurerm backend acquires a blob lease on the state object for the
     duration of any operation that mutates state. If a previous run crashed,
-    break the lease with
-    `az storage blob lease break --container-name tfstate --blob-name platform/network.tfstate --account-name tfstateprod001 --auth-mode login`.
+    break the lease with:
+
+    ```bash
+    az storage blob lease break \
+      --container-name tfstate \
+      --blob-name platform/network.tfstate \
+      --account-name tfstateprod001 \
+      --auth-mode login
+    ```
 
 ## OIDC from GitHub Actions
 
@@ -91,7 +98,7 @@ jobs:
 ## RBAC required on the state container
 
 The identity running Terraform needs **data-plane** access on the blob
-container — control-plane roles like *Contributor* are not enough when
+container, control-plane roles like *Contributor* are not enough when
 `use_azuread_auth = true`.
 
 ```hcl
@@ -162,7 +169,7 @@ Workflow:
 
 1. `cd bootstrap && terraform init && terraform apply` (local state).
 2. Add the `backend "azurerm"` block to the bootstrap module.
-3. `terraform init -migrate-state` — Terraform copies the local state into
+3. `terraform init -migrate-state`: Terraform copies the local state into
     the new container.
 4. Commit; never apply the bootstrap module from CI again.
 

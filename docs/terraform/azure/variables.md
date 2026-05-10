@@ -117,7 +117,7 @@ variable "project" {
 
 ## Tags (with required keys)
 
-Validates the map *and* enforces that specific keys are present — useful for
+Validates the map *and* enforces that specific keys are present, useful for
 governance / cost-allocation tags. Tags on Azure are case-sensitive, max 512
 chars per value (256 for storage), and limited to 50 per resource.
 

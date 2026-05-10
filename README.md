@@ -23,7 +23,7 @@ useful:
 | `lychee.toml`                | [lychee](https://lychee.cli.rs/) link-checker config (used by pre-commit and CI).                              |
 | `.editorconfig`              | Whitespace defaults across editors.                                                                            |
 | `Makefile`                   | Convenience targets — run `make help`.                                                                         |
-| `terragrunt/`                | Legacy Terragrunt example. Modern patterns live in [`docs/terraform/terragrunt/`](docs/terraform/terragrunt/).  |
+| `terragrunt/`                | Legacy Terragrunt example. Modern patterns live in [`docs/terraform/terragrunt/`](docs/terraform/terragrunt/). |
 | `.github/workflows/`         | `ci.yml` (PR checks), `deploy.yml` (Pages deploy on push to `main`), `links.yml` (lychee on PR + weekly cron). |
 
 ## Local development
