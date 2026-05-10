@@ -30,6 +30,6 @@ package = false
 # ---------------------------------------------------------------------------
 [tool.codespell]
 skip = "uv.lock,site,.venv,*.svg,terragrunt"
-ignore-words-list = "hcl,opentofu,fo,nd,te,ot"
+ignore-words-list = "CAF,hcl,opentofu,fo,nd,te,ot"
 check-filenames = true
 check-hidden = true

@@ -91,7 +91,7 @@ locals {
   # <project>-<environment>-<name>, e.g. acme-prod-app
   name_prefix = "${var.project}-${var.environment}-${var.name}"
 
-  # Resource-type abbreviations follow Microsoft's CAF guidance. # codespell:ignore CAF
+  # Resource-type abbreviations follow Microsoft's CAF guidance.
   rg_name      = "rg-${local.name_prefix}"
   vnet_name    = "vnet-${local.name_prefix}"
   kv_name      = substr(replace("kv${var.project}${var.environment}${var.name}", "-", ""), 0, 24)
