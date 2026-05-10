@@ -38,43 +38,37 @@ variable "aws_region" {
 
 ## Account ID
 
-```hcl
+``` hcl linenums="1" hl_lines="2 6"
 variable "aws_account_id" {
-  type        = string
+  type        = string # (1)!
   description = "The AWS account ID (12-digit number)."
 
   validation {
-    condition     = can(regex("^[0-9]{12}$", var.aws_account_id))
+    condition     = can(regex("^[0-9]{12}$", var.aws_account_id)) # (2)!
     error_message = "The aws_account_id must be exactly 12 digits (0-9), with no spaces, dashes, or other characters."
   }
 }
 ```
 
-!!! note "Hard character limit"
-    AWS account IDs are always exactly 12 numeric digits — anchoring with ^...$ rejects accidental whitespace or extra characters.
-
-!!! note "Why not number type"
-    Keep them as string, not number — leading zeros are valid in account IDs and number would strip them.
+1. Keep them as string, not number. Leading zeros are valid in account IDs and number would strip them.
+2. AWS account IDs are always exactly 12 numeric digits anchoring with `^...$` rejects accidental whitespace or extra characters.
 
 ## List of Account IDs
 
-```hcl
+``` hcl linenums="1" hl_lines="2 6"
 variable "aws_account_ids" {
-  type        = list(string)
+  type        = list(string) # (1)!
   description = "A list of AWS account IDs (each a 12-digit number)."
 
   validation {
-    condition     = alltrue([for id in var.aws_account_ids : can(regex("^[0-9]{12}$", id))])
+    condition     = alltrue([for id in var.aws_account_ids : can(regex("^[0-9]{12}$", id))]) # (2)!
     error_message = "Each entry in aws_account_ids must be exactly 12 digits (0-9)."
   }
 }
 ```
 
-!!! note "Hard character limit"
-    AWS account IDs are always exactly 12 numeric digits — anchoring with ^...$ rejects accidental whitespace or extra characters.
-
-!!! note "Why not number type"
-    Keep them as string, not number — leading zeros are valid in account IDs and number would strip them.
+1. Keep them as string, not number. Leading zeros are valid in account IDs and number would strip them.
+2. AWS account IDs are always exactly 12 numeric digits anchoring with `^...$` rejects accidental whitespace or extra characters.
 
 ## Environment
 

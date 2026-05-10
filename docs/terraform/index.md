@@ -1,5 +1,6 @@
 ---
 title: Terraform / OpenTofu
+description: Reusable Terraform / OpenTofu snippets for AWS, Azure, GCP, and Terragrunt.
 tags:
   - terraform
 ---
@@ -13,35 +14,28 @@ Snippets here work with both [Terraform](https://developer.hashicorp.com/terrafo
 
 <div class="grid cards" markdown>
 
-- :material-variable:{ .lg .middle } **[Common variables](variables.md)**
+- :material-aws:{ .lg .middle } **[AWS](aws/index.md)**
 
     ---
 
-    Typed, validated `variable` blocks: environment, region, tags, CIDRs,
-    instance type, FQDN, optionals, objects, secrets.
+    Amazon Web Services (AWS) common variables and more.
 
-- :material-folder-multiple:{ .lg .middle } **[Module skeleton](module-skeleton.md)**
-
-    ---
-
-    Opinionated layout for a reusable module.
-
-- :material-database-export:{ .lg .middle } **[Backends](backends.md)**
+- :material-microsoft-azure:{ .lg .middle } **[Azure](azure/index.md)**
 
     ---
 
-    Remote state backends with locking and encryption.
+    Microsoft Azure common variables and more.
 
-- :material-cog:{ .lg .middle } **[Provider configuration](providers.md)**
-
-    ---
-
-    Sensible defaults for AWS, GCP, Azure providers.
-
-- :material-shield-key:{ .lg .middle } **[IAM policy patterns](iam-policies.md)**
+- :material-google-cloud:{ .lg .middle } **[GCP](gcp/index.md)**
 
     ---
 
-    Least-privilege snippets you copy more than you'd like to admit.
+    Google Cloud Platform (GCP) common variables and more.
+
+- :material-rocket-launch:{ .lg .middle } **[Terragrunt](terragrunt/index.md)**
+
+    ---
+
+    Modern Terragrunt patterns: `root.hcl`, units, and explicit stacks.
 
 </div>
