@@ -91,7 +91,7 @@ locals {
   # <project>-<environment>-<name>, e.g. acme-prod-app
   name_prefix = "${var.project}-${var.environment}-${var.name}"
 
-  # Resource-type abbreviations follow Microsoft's CAF guidance.
+  # Resource-type abbreviations follow Microsoft's CAF guidance. # codespell:ignore CAF
   rg_name      = "rg-${local.name_prefix}"
   vnet_name    = "vnet-${local.name_prefix}"
   kv_name      = substr(replace("kv${var.project}${var.environment}${var.name}", "-", ""), 0, 24)
@@ -134,7 +134,7 @@ resource "azurerm_virtual_network" "this" {
 
 ## `examples/basic/main.tf`
 
-Every example is a *real, applyable* root module, not a snippet. CI should
+Every example is a real root module, not a snippet. CI should
 `terraform init && terraform validate` every example on every PR.
 
 ```hcl

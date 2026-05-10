@@ -117,7 +117,7 @@ automatically, so the module only needs to set tags it specifically owns
 
 ## `examples/basic/main.tf`
 
-Every example is a *real, applyable* root module not a snippet. CI should
+Every example is a real root module not a snippet. CI should
 `terraform init && terraform validate` every example on every PR.
 
 ```hcl
