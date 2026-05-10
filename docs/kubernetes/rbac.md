@@ -1,5 +1,6 @@
 ---
 title: RBAC patterns
+description: Least-privilege ServiceAccount, Role, and ClusterRole patterns for workloads.
 status: stub
 tags:
   - kubernetes

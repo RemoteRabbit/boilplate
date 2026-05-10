@@ -1,5 +1,6 @@
 ---
 title: Node — multi-stage, pnpm
+description: Multi-stage Dockerfile for Node services with pnpm and a slim runtime stage.
 status: stub
 tags:
   - docker

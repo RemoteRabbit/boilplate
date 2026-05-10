@@ -1,5 +1,6 @@
 ---
 title: Helm chart skeleton
+description: Opinionated Helm chart skeleton with values schema, helpers, and tests.
 status: stub
 tags:
   - kubernetes

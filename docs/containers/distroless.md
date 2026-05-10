@@ -1,5 +1,6 @@
 ---
 title: Distroless / chainguard images
+description: Distroless and Chainguard base images for minimal, hardened runtime containers.
 status: stub
 tags:
   - docker

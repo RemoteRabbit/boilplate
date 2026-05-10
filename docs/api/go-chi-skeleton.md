@@ -1,5 +1,6 @@
 ---
 title: Go chi service skeleton
+description: Minimal Go service skeleton built on chi with structured logging and graceful shutdown.
 status: stub
 tags:
   - api

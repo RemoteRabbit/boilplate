@@ -1,5 +1,6 @@
 ---
 title: API / Backend
+description: Service skeletons, error responses, pagination, and OpenAPI starters.
 status: stub
 tags:
   - api

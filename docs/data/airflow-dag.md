@@ -1,5 +1,6 @@
 ---
 title: Airflow TaskFlow DAG skeleton
+description: Airflow DAG skeleton with TaskFlow API, retries, and sensible defaults.
 status: stub
 tags:
   - data

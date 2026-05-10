@@ -1,5 +1,6 @@
 ---
 title: FastAPI service skeleton
+description: Opinionated FastAPI project layout with settings, routers, and dependencies.
 status: stub
 tags:
   - api

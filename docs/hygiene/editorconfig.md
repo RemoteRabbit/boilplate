@@ -1,5 +1,6 @@
 ---
 title: .editorconfig
+description: Sensible .editorconfig defaults for consistent whitespace across editors.
 status: stub
 tags:
   - hygiene

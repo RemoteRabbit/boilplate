@@ -1,5 +1,6 @@
 ---
 title: Observability
+description: Structured logging, OpenTelemetry, and Prometheus snippets for service observability.
 status: stub
 tags:
   - observability

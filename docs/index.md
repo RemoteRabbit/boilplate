@@ -1,5 +1,6 @@
 ---
 title: boilplate
+description: Copy-paste-ready boilerplate for Terraform, GitHub Actions, containers, Kubernetes, and more.
 hide:
   - navigation
 ---
@@ -25,17 +26,9 @@ straight into a project. Everything here is designed to be:
 
     ---
 
-    Variables, modules, backends, providers, IAM patterns.
+    Variables, modules, backends, providers, IAM patterns, and Terragrunt.
 
     [:octicons-arrow-right-24: Browse](terraform/index.md)
-
-- :material-layers-triple:{ .lg .middle } **Terragrunt**
-
-    ---
-
-    Modern `root.hcl` + units + explicit stacks.
-
-    [:octicons-arrow-right-24: Browse](terragrunt/index.md)
 
 - :material-github:{ .lg .middle } **GitHub Actions**
 

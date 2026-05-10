@@ -1,5 +1,6 @@
 ---
 title: HPA / PDB / NetworkPolicy
+description: HPA, PodDisruptionBudget, and NetworkPolicy snippets for autoscaling workloads.
 status: stub
 tags:
   - kubernetes

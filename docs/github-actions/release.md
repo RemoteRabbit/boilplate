@@ -1,5 +1,6 @@
 ---
 title: Release automation
+description: Automated releases with release-please, changelogs, and tag-driven publishes.
 status: stub
 tags:
   - github-actions

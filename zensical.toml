@@ -17,21 +17,37 @@ extra_css        = ["assets/extra.css"]
 extra_javascript = ["assets/external-links.js"]
 nav = [
   { Home = "index.md" },
-  { Examples = [
-      { "Code block features" = "examples/code-blocks.md" },
-  ] },
   { "Terraform / OpenTofu" = [
       "terraform/index.md",
-      { "Common variables"      = "terraform/variables.md" },
-      { "Module skeleton"       = "terraform/module-skeleton.md" },
-      { Backends                = "terraform/backends.md" },
-      { "Provider configuration" = "terraform/providers.md" },
-      { "IAM policy patterns"   = "terraform/iam-policies.md" },
-  ] },
-  { Terragrunt = [
-      "terragrunt/index.md",
-      { "root.hcl + env.hcl + unit" = "terragrunt/root-config.md" },
-      { "Explicit stacks"           = "terragrunt/stacks.md" },
+      { "AWS" = [
+        "terraform/aws/index.md",
+        {"Common Variables" = "terraform/aws/variables.md"},
+        {"Module Skeleton" = "terraform/aws/module-skeleton.md"},
+        {"Backends" = "terraform/aws/backends.md"},
+        {"Provider" = "terraform/aws/providers.md"},
+        {"IAM Policies" = "terraform/aws/iam-policies.md"},
+        ]},
+      { "Azure" = [
+        "terraform/azure/index.md",
+        {"Common Variables" = "terraform/azure/variables.md"},
+        {"Module Skeleton" = "terraform/azure/module-skeleton.md"},
+        {"Backends" = "terraform/azure/backends.md"},
+        {"Provider" = "terraform/azure/providers.md"},
+        {"IAM Policies" = "terraform/azure/iam-policies.md"},
+        ]},
+      { "GCP" = [
+        "terraform/gcp/index.md",
+        {"Common Variables" = "terraform/gcp/variables.md"},
+        {"Module Skeleton" = "terraform/gcp/module-skeleton.md"},
+        {"Backends" = "terraform/gcp/backends.md"},
+        {"Provider" = "terraform/gcp/providers.md"},
+        {"IAM Policies" = "terraform/gcp/iam-policies.md"},
+        ]},
+      { "Terragrunt" = [
+        "terraform/terragrunt/index.md",
+        {"root.hcl + env.hcl + unit" = "terraform/terragrunt/root-config.md"},
+        {"Explicit stacks" = "terraform/terragrunt/stacks.md"},
+        ]},
   ] },
   { "GitHub Actions" = [
       "github-actions/index.md",
@@ -149,7 +165,6 @@ view = "material/eye"
 [project.theme.icon.tag]
 default       = "lucide/hash"
 # Section tags (one per nav top-level section)
-examples      = "lucide/code-2"
 api           = "lucide/plug"
 data          = "lucide/database"
 observability = "lucide/activity"

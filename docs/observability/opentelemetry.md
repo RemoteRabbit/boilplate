@@ -1,5 +1,6 @@
 ---
 title: OpenTelemetry init
+description: OpenTelemetry SDK setup for traces, metrics, and logs across Python, Go, and Node.
 status: stub
 tags:
   - observability

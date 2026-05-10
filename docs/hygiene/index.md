@@ -1,5 +1,6 @@
 ---
 title: Repo hygiene
+description: Repo hygiene snippets — .gitignore, .editorconfig, pre-commit, and Makefiles.
 status: stub
 tags:
   - hygiene

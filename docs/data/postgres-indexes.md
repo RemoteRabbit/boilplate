@@ -1,5 +1,6 @@
 ---
 title: Postgres indexing & partitioning
+description: When and how to add indexes — B-tree, partial, GIN, and covering indexes.
 status: stub
 tags:
   - data
