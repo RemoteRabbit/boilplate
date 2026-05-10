@@ -39,9 +39,8 @@ jobs:
       - name: Install dependencies
         run: uv sync --frozen --no-dev
 
-      - name: Build site
-        # See ci.yml for why --strict is disabled.
-        run: uv run zensical build
+      - name: Build site (strict)
+        run: uv run zensical build --strict
 
       - uses: actions/configure-pages@v6
 
