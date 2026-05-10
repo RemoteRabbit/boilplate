@@ -15,11 +15,11 @@ generate "provider" {
 remote_state {
   backend = "s3"
   config = {
-    encrypt        = true
-    bucket         = ""
-    key            = "${path_relative_to_include()}/terraform.tfstate"
-    region         = "us-east-2"
-    encrypt        = true
+    encrypt = true
+    # TODO: fill in the state bucket name (must be created out-of-band).
+    bucket  = ""
+    key     = "${path_relative_to_include()}/terraform.tfstate"
+    region  = "us-east-2"
   }
   generate = {
     path      = "backend.tf"
