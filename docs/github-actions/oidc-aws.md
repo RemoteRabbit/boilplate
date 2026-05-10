@@ -1,5 +1,6 @@
 ---
 title: OIDC → AWS (no static keys)
+description: Authenticate GitHub Actions to AWS via OIDC — no long-lived access keys.
 status: stub
 tags:
   - github-actions

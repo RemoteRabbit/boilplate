@@ -1,5 +1,6 @@
 ---
 title: Prometheus naming + RED/USE
+description: Prometheus instrumentation following RED and USE methods, with sample alerts.
 status: stub
 tags:
   - observability

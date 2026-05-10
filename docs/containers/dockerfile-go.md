@@ -1,5 +1,6 @@
 ---
 title: Go — static binary, distroless
+description: Multi-stage Dockerfile producing a static Go binary on a distroless runtime.
 status: stub
 tags:
   - docker

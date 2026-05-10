@@ -1,5 +1,6 @@
 ---
 title: Alembic migration skeleton
+description: SQLAlchemy + Alembic project layout with autogenerate, env.py, and per-env URLs.
 status: stub
 tags:
   - data

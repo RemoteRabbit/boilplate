@@ -1,5 +1,6 @@
 ---
 title: RFC 7807 problem+json
+description: RFC 7807 problem-detail error responses for HTTP APIs.
 status: stub
 tags:
   - api

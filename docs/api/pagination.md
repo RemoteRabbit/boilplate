@@ -1,5 +1,6 @@
 ---
 title: Pagination — cursor vs offset
+description: Cursor and offset pagination patterns for REST APIs.
 status: stub
 tags:
   - api

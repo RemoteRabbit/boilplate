@@ -1,5 +1,6 @@
 ---
 title: Kubernetes
+description: Deployment baselines, probes, scaling, RBAC, and Helm chart skeletons.
 status: stub
 tags:
   - kubernetes

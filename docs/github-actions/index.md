@@ -1,5 +1,6 @@
 ---
 title: GitHub Actions
+description: Reusable workflows, OIDC, container builds, and release automation for GitHub Actions.
 status: stub
 tags:
   - github-actions

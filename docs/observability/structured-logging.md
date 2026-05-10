@@ -1,5 +1,6 @@
 ---
 title: Structured logging
+description: Structured (JSON) logging configurations for Python, Go, and Node services.
 status: stub
 tags:
   - observability

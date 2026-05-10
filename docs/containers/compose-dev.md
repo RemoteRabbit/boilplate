@@ -1,5 +1,6 @@
 ---
 title: Compose dev stacks
+description: Reusable docker compose stacks for local development (Postgres, Redis, observability).
 status: stub
 tags:
   - docker

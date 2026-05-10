@@ -1,5 +1,6 @@
 ---
 title: Path-filtered matrix builds
+description: Build a dynamic matrix of jobs from changed paths using dorny/paths-filter.
 status: stub
 tags:
   - github-actions

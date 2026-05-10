@@ -1,5 +1,6 @@
 ---
 title: OpenAPI starter + lint
+description: OpenAPI 3 starter spec plus linting with spectral or vacuum.
 status: stub
 tags:
   - api

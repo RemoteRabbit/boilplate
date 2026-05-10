@@ -1,5 +1,6 @@
 ---
 title: Containers
+description: Multi-stage Dockerfiles, distroless images, and Compose dev stacks.
 status: stub
 tags:
   - docker

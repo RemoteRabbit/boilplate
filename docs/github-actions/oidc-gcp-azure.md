@@ -1,5 +1,6 @@
 ---
 title: OIDC → GCP / Azure
+description: Authenticate GitHub Actions to GCP and Azure via OIDC / Workload Identity Federation.
 status: stub
 tags:
   - github-actions

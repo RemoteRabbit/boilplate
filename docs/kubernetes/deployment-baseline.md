@@ -1,5 +1,6 @@
 ---
 title: Deployment + Service + Ingress baseline
+description: Production-ready Deployment baseline — resources, probes, security context, and topology.
 status: stub
 tags:
   - kubernetes

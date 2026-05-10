@@ -1,5 +1,6 @@
 ---
 title: Python — multi-stage with uv
+description: Multi-stage Dockerfile for Python services using uv and a slim runtime stage.
 status: stub
 tags:
   - docker

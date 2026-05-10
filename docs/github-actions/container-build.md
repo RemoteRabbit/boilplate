@@ -1,5 +1,6 @@
 ---
 title: Container build & push
+description: Build and push container images with cache, multi-arch, and SBOM via GitHub Actions.
 status: stub
 tags:
   - github-actions

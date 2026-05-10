@@ -1,5 +1,6 @@
 ---
 title: Postgres schema conventions
+description: Postgres naming, schema, and constraint conventions for long-lived databases.
 status: stub
 tags:
   - data
