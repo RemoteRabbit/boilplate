@@ -23,7 +23,7 @@ useful:
 | `lychee.toml`                | [lychee](https://lychee.cli.rs/) link-checker config (used by pre-commit and CI).                              |
 | `.editorconfig`              | Whitespace defaults across editors.                                                                            |
 | `Makefile`                   | Convenience targets — run `make help`.                                                                         |
-| `terragrunt/`                | Working Terragrunt example referenced by the docs *(WIP — being modernized)*.                                  |
+| `terragrunt/`                | Legacy Terragrunt example. Modern patterns live in [`docs/terraform/terragrunt/`](docs/terraform/terragrunt/).  |
 | `.github/workflows/`         | `ci.yml` (PR checks), `deploy.yml` (Pages deploy on push to `main`), `links.yml` (lychee on PR + weekly cron). |
 
 ## Local development
@@ -79,3 +79,12 @@ This site originally ran on [Material for MkDocs](https://squidfunk.github.io/mk
 it now runs on [Zensical](https://zensical.org/), the team's new SSG. Zensical
 is currently alpha, so the dependency is pinned to an exact version
 (see [`pyproject.toml`](pyproject.toml)) and bumped deliberately.
+
+## Contributing
+
+This is primarily a personal stash, but PRs and issues are welcome. See
+[CONTRIBUTING.md](CONTRIBUTING.md) for the local setup and conventions.
+
+## License
+
+Released under the [GPL-3.0 license](LICENSE).
