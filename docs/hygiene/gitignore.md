@@ -1,5 +1,6 @@
 ---
 title: .gitignore by stack
+description: Stack-specific .gitignore starters for Python, Node, Go, Terraform, and more.
 status: stub
 tags:
   - hygiene
