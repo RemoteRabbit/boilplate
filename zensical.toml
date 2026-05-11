@@ -19,6 +19,8 @@ nav = [
   { Home = "index.md" },
   { "Terraform / OpenTofu" = [
       "terraform/index.md",
+      { "Style Guide" = "terraform/style-guide.md" },
+      { "Useful Commands" = "terraform/commands.md" },
       { "AWS" = [
         "terraform/aws/index.md",
         {"Common Variables" = "terraform/aws/variables.md"},
@@ -301,7 +303,7 @@ generator = false
 # Plugins
 # ---------------------------------------------------------------------------
 
-# Offline usage — makes site search work when serving via file:// (downloads,
+# Offline usage: makes site search work when serving via file:// (downloads,
 # air-gapped envs, distributing alongside a product).
 # https://zensical.org/docs/setup/offline/
 #
