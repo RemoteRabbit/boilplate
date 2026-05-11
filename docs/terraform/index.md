@@ -14,6 +14,18 @@ Snippets here work with both [Terraform](https://developer.hashicorp.com/terrafo
 
 <div class="grid cards" markdown>
 
+- :material-book-open-variant:{ .lg .middle } **[Style Guide](style-guide.md)**
+
+    ---
+
+    Conventions for variables, validation messages, modules, file layout, tagging, and more.
+
+- :material-console:{ .lg .middle } **[Useful Commands](commands.md)**
+
+    ---
+
+    Day-to-day Terraform / OpenTofu CLI commands worth keeping handy.
+
 - :material-aws:{ .lg .middle } **[AWS](aws/index.md)**
 
     ---

@@ -14,7 +14,7 @@ tags:
 
 ## Planned content
 
-- Naming: `http_requests_total`, `_seconds`, `_bytes` — units in the name
+- Naming: `http_requests_total`, `_seconds`, `_bytes`: units in the name
 - RED method (Rate, Errors, Duration) for request-driven services
 - USE method (Utilization, Saturation, Errors) for resources
 - Histogram bucket selection

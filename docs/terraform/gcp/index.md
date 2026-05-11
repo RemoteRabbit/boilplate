@@ -1,6 +1,6 @@
 ---
 title: GCP
-description: GCP-specific Terraform snippets — variables, modules, backends, providers, IAM.
+description: GCP-specific Terraform snippets: variables, modules, backends, providers, IAM.
 tags:
   - terraform
   - gcp

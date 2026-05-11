@@ -1,12 +1,12 @@
 ---
-title: Pagination — cursor vs offset
+title: Pagination: cursor vs offset
 description: Cursor and offset pagination patterns for REST APIs.
 status: stub
 tags:
   - api
 ---
 
-# Pagination — cursor vs offset
+# Pagination: cursor vs offset
 
 !!! note "Stub page"
     When to use which, with copy-paste implementations.

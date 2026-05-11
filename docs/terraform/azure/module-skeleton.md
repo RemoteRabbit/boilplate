@@ -1,6 +1,6 @@
 ---
 title: Module skeleton
-description: Opinionated layout for a reusable Azure Terraform / OpenTofu module — file structure, version pinning, naming conventions, terraform-docs, native tftest, and pre-commit-terraform.
+description: Opinionated layout for a reusable Azure Terraform / OpenTofu module: file structure, version pinning, naming conventions, terraform-docs, native tftest, and pre-commit-terraform.
 tags:
   - terraform
   - azure
@@ -341,7 +341,7 @@ pre-commit run --all-files
 
 - [Terraform: Standard module structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
 - [Terraform: Tests (`terraform test`)](https://developer.hashicorp.com/terraform/language/tests)
-- [Microsoft Learn: Cloud Adoption Framework — naming conventions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
+- [Microsoft Learn: Cloud Adoption Framework: naming conventions](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming)
 - [Microsoft Learn: Recommended abbreviations for Azure resource types](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations)
 - [azurerm provider reference](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
 - [terraform-docs](https://terraform-docs.io/)

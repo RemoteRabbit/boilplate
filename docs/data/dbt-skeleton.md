@@ -1,6 +1,6 @@
 ---
 title: dbt project skeleton
-description: Opinionated dbt project skeleton — sources, staging, marts, and tests.
+description: Opinionated dbt project skeleton: sources, staging, marts, and tests.
 status: stub
 tags:
   - data

@@ -1,6 +1,6 @@
 ---
 title: Remote state backends
-description: GCS backend configuration for Terraform/OpenTofu — versioning, encryption, automatic locking, bootstrap, and Workload Identity Federation auth from CI.
+description: GCS backend configuration for Terraform/OpenTofu: versioning, encryption, automatic locking, bootstrap, and Workload Identity Federation auth from CI.
 tags:
   - terraform
   - gcp
@@ -9,13 +9,13 @@ tags:
 # Remote state backends
 
 The `gcs` backend stores Terraform state in a Google Cloud Storage bucket.
-State **locking is automatic** — GCS uses object generations to coordinate
+State **locking is automatic**: GCS uses object generations to coordinate
 concurrent writers, so there is no DynamoDB-equivalent table to provision.
 
 !!! tip "Pick a single regional bucket per state"
     Use a regional (not multi-region) bucket close to where you run plans,
     enable **Object Versioning**, **Uniform bucket-level access**, and either
-    a Google-managed key or a CMEK. One bucket can hold many state files —
+    a Google-managed key or a CMEK. One bucket can hold many state files;
     use `prefix` to namespace them.
 
 ---
@@ -101,7 +101,7 @@ Standard pattern:
 4. Commit and delete the local `terraform.tfstate*` files.
 
 ```hcl
-# bootstrap/main.tf — run with local state, ONCE per org
+# bootstrap/main.tf: run with local state, ONCE per org
 terraform {
   required_version = ">= 1.3"
   required_providers {

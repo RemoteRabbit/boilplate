@@ -141,7 +141,7 @@ resource "aws_kms_alias" "tfstate" {
 resource "aws_s3_bucket" "tfstate" {
   bucket = var.bucket_name
 
-  # Belt and braces — never let someone delete this by accident.
+  # Belt and braces: never let someone delete this by accident.
   lifecycle {
     prevent_destroy = true
   }
@@ -242,7 +242,7 @@ resource "aws_dynamodb_table" "tflocks" {
 ## References
 
 - [Terraform: S3 backend](https://developer.hashicorp.com/terraform/language/backend/s3)
-- [Terraform 1.10 release notes — S3 native locking](https://github.com/hashicorp/terraform/releases/tag/v1.10.0)
+- [Terraform 1.10 release notes: S3 native locking](https://github.com/hashicorp/terraform/releases/tag/v1.10.0)
 - [OpenTofu: S3 backend](https://opentofu.org/docs/language/settings/backends/s3/)
 - [AWS: Protecting data with server-side encryption (SSE-KMS)](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html)
 - [AWS: Using versioning in S3 buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Versioning.html)

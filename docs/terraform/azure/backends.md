@@ -1,6 +1,6 @@
 ---
 title: Remote state backends
-description: Azure Storage backend configuration for Terraform / OpenTofu — blob lease locking, OIDC auth from CI, and the bootstrap pattern.
+description: Azure Storage backend configuration for Terraform / OpenTofu: blob lease locking, OIDC auth from CI, and the bootstrap pattern.
 tags:
   - terraform
   - azure
@@ -121,7 +121,7 @@ itself. Solve it with a one-shot bootstrap module that runs against **local**
 state, then migrate it.
 
 ```hcl
-# bootstrap/main.tf  — apply with local state, then `terraform state push`.
+# bootstrap/main.tf : apply with local state, then `terraform state push`.
 terraform {
   required_version = ">= 1.3"
   required_providers {

@@ -1,6 +1,6 @@
 ---
 title: Common variables
-description: Reusable, well-validated Terraform / OpenTofu variable blocks for GCP — project, region, zone, labels, CIDRs, machine type, and more.
+description: Reusable, well-validated Terraform / OpenTofu variable blocks for GCP: project, region, zone, labels, CIDRs, machine type, and more.
 tags:
   - terraform
   - gcp
@@ -294,7 +294,7 @@ variable "subnets" {
 
 ```hcl
 variable "db_password" {
-  description = "Cloud SQL admin password. Provide via TF_VAR_db_password or Secret Manager — do not commit."
+  description = "Cloud SQL admin password. Provide via TF_VAR_db_password or Secret Manager: do not commit."
   type        = string
   sensitive   = true
 

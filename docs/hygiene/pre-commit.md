@@ -172,7 +172,7 @@ For project-specific checks that don't warrant their own repo:
 ```
 
 !!! warning "`language: system` requires the binary on PATH"
-    `system` hooks won't be installed for you — make sure `uv`, `lychee`, etc.
+    `system` hooks won't be installed for you: make sure `uv`, `lychee`, etc.
     are available in CI and locally, or use `language: python` /
     `language: docker` / `language: golang` to let pre-commit manage them.
 

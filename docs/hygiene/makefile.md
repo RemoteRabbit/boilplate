@@ -1,6 +1,6 @@
 ---
 title: Makefile patterns
-description: Makefile patterns — self-documenting help target, .PHONY hygiene, and uv integration.
+description: Makefile patterns: self-documenting help target, .PHONY hygiene, and uv integration.
 status: stub
 tags:
   - hygiene

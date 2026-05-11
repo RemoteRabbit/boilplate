@@ -1,6 +1,6 @@
 ---
 title: AWS
-description: AWS-specific Terraform snippets — variables, modules, backends, providers, IAM.
+description: AWS-specific Terraform snippets: variables, modules, backends, providers, IAM.
 tags:
   - terraform
   - aws

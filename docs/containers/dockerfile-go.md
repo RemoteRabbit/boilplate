@@ -1,5 +1,5 @@
 ---
-title: Go — static binary, distroless
+title: Go: static binary, distroless
 description: Multi-stage Dockerfile producing a static Go binary on a distroless runtime.
 status: stub
 tags:
@@ -7,7 +7,7 @@ tags:
   - go
 ---
 
-# Go — static binary, distroless
+# Go: static binary, distroless
 
 !!! note "Stub page"
     Single-binary Go services in a tiny image.

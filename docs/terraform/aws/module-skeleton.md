@@ -1,6 +1,6 @@
 ---
 title: Module skeleton
-description: Opinionated layout for a reusable AWS Terraform / OpenTofu module — file structure, version pinning, default_tags, terraform-docs, native tftest, and pre-commit-terraform.
+description: Opinionated layout for a reusable AWS Terraform / OpenTofu module: file structure, version pinning, default_tags, terraform-docs, native tftest, and pre-commit-terraform.
 tags:
   - terraform
   - aws

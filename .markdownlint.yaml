@@ -2,7 +2,7 @@
 # https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
 default: true
 
-# Line length — match other linters at 120, ignore code blocks/tables.
+# Line length: match other linters at 120, ignore code blocks/tables.
 MD013:
   line_length: 120
   code_blocks: false

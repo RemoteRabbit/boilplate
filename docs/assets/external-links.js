@@ -14,7 +14,7 @@
           a.target = '_blank';
           a.rel = 'noopener noreferrer';
         }
-      } catch (_) { /* malformed URL — ignore */ }
+      } catch (_) { /* malformed URL: ignore */ }
     });
   }
 

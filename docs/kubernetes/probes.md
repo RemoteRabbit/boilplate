@@ -1,6 +1,6 @@
 ---
 title: Probes done right
-description: Liveness, readiness, and startup probes done right — common mistakes and fixes.
+description: Liveness, readiness, and startup probes done right: common mistakes and fixes.
 status: stub
 tags:
   - kubernetes

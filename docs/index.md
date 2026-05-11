@@ -12,9 +12,9 @@ hide:
 This site collects small, opinionated, well-validated snippets you can drop
 straight into a project. Everything here is designed to be:
 
-- **Self-contained** — copy a single block and it works.
-- **Validated** — variables come with `validation` blocks, types, and sane defaults.
-- **Cited** — links back to the upstream docs so you can verify behavior.
+- **Self-contained**: copy a single block and it works.
+- **Validated**: variables come with `validation` blocks, types, and sane defaults.
+- **Cited**: links back to the upstream docs so you can verify behavior.
 
 ---
 

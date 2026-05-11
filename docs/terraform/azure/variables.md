@@ -1,6 +1,6 @@
 ---
 title: Common variables
-description: Reusable, well-validated Terraform / OpenTofu variable blocks for Azure — location, subscription, tenant, resource groups, tags, CIDRs, VM sizes, and more.
+description: Reusable, well-validated Terraform / OpenTofu variable blocks for Azure: location, subscription, tenant, resource groups, tags, CIDRs, VM sizes, and more.
 tags:
   - terraform
   - azure
@@ -291,7 +291,7 @@ variable "subnets" {
 
 ```hcl
 variable "sql_admin_password" {
-  description = "Azure SQL administrator password. Provide via TF_VAR_sql_admin_password or Key Vault — do not commit."
+  description = "Azure SQL administrator password. Provide via TF_VAR_sql_admin_password or Key Vault: do not commit."
   type        = string
   sensitive   = true
 

@@ -14,5 +14,5 @@ tags:
 ## Planned content
 
 - HPA on CPU + custom metrics
-- PodDisruptionBudget — minAvailable vs maxUnavailable
+- PodDisruptionBudget: minAvailable vs maxUnavailable
 - Default-deny NetworkPolicy + targeted allow rules

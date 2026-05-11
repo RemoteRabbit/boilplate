@@ -297,7 +297,7 @@ variable "subnets" {
 
 ```hcl
 variable "db_password" {
-  description = "Database admin password. Provide via TF_VAR_db_password or a secrets manager — do not commit."
+  description = "Database admin password. Provide via TF_VAR_db_password or a secrets manager: do not commit."
   type        = string
   sensitive   = true
 

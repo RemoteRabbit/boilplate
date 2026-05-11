@@ -1,6 +1,6 @@
 ---
 title: Azure
-description: Azure-specific Terraform snippets — variables, modules, backends, providers, RBAC.
+description: Azure-specific Terraform snippets: variables, modules, backends, providers, RBAC.
 tags:
   - terraform
   - azure
