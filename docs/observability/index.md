@@ -9,7 +9,7 @@ tags:
 # Observability
 
 !!! note "Stub page"
-    Logging, tracing, and metrics — same patterns across stacks.
+    Logging, tracing, and metrics: same patterns across stacks.
 
 ## Planned content
 

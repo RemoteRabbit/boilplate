@@ -1,6 +1,6 @@
 ---
 title: root.hcl + env.hcl + unit pattern
-description: The modern 3-file Terragrunt layout — shared root, per-environment locals, thin per-unit configs.
+description: The modern 3-file Terragrunt layout: shared root, per-environment locals, thin per-unit configs.
 tags:
   - terragrunt
   - terraform
@@ -11,11 +11,11 @@ tags:
 The current Gruntwork-recommended layout splits configuration into three files
 that compose by location on disk:
 
-1. **`root.hcl`** — one per repo, at the top of `live/`. Holds the remote-state
+1. **`root.hcl`**: one per repo, at the top of `live/`. Holds the remote-state
    backend, generated provider, and locals shared by every unit.
-2. **`env.hcl`** — one per environment directory. Holds variables that differ
+2. **`env.hcl`**: one per environment directory. Holds variables that differ
    per env (region, account ID, environment name).
-3. **Unit `terragrunt.hcl`** — one per deployable unit. Includes `root` (and
+3. **Unit `terragrunt.hcl`**: one per deployable unit. Includes `root` (and
    optionally `env`), points at a module `source`, and supplies `inputs`.
 
 ## Directory layout
@@ -194,12 +194,12 @@ inputs = {
 `dependency` blocks make one unit's outputs available to another. Terragrunt
 sequences `run --all apply` so that `vpc` applies before `eks`. `mock_outputs`
 lets `terragrunt plan` succeed for downstream units before upstream ones have
-ever been applied — useful in CI on a fresh branch.
+ever been applied: useful in CI on a fresh branch.
 
 !!! tip "Scope the mocks"
     Always pair `mock_outputs` with `mock_outputs_allowed_terraform_commands`.
     Without it, `terragrunt apply` will happily apply against the mock values if
-    the dependency hasn't been applied — which is almost never what you want.
+    the dependency hasn't been applied: which is almost never what you want.
 
 !!! warning "Don't put `inputs` in `root.hcl` that depend on the unit"
     Locals like `path_relative_to_include()` are evaluated in the **including**

@@ -1,6 +1,6 @@
 # boilplate
 
-A personal stash of copy-paste-ready snippets for things I keep rewriting —
+A personal stash of copy-paste-ready snippets for things I keep rewriting:
 Terraform/Terragrunt, GitHub Actions, containers, Kubernetes, Postgres, and so
 on. Built primarily for me, but published in case anyone else finds bits of it
 useful:
@@ -22,7 +22,7 @@ useful:
 | `.pre-commit-config.yaml`    | [pre-commit](https://pre-commit.com/) hooks (hygiene + `zensical build` + lychee).                             |
 | `lychee.toml`                | [lychee](https://lychee.cli.rs/) link-checker config (used by pre-commit and CI).                              |
 | `.editorconfig`              | Whitespace defaults across editors.                                                                            |
-| `Makefile`                   | Convenience targets — run `make help`.                                                                         |
+| `Makefile`                   | Convenience targets: run `make help`.                                                                         |
 | `terragrunt/`                | Legacy Terragrunt example. Modern patterns live in [`docs/terraform/terragrunt/`](docs/terraform/terragrunt/). |
 | `.github/workflows/`         | `ci.yml` (PR checks), `deploy.yml` (Pages deploy on push to `main`), `links.yml` (lychee on PR + weekly cron). |
 
@@ -33,7 +33,7 @@ manages Python versions and the virtual env). Everything else goes through the
 Makefile:
 
 ```sh
-make install      # uv sync — create .venv and install deps
+make install      # uv sync: create .venv and install deps
 make hooks        # install pre-commit git hooks (one-time)
 make serve        # live-reload dev server at http://localhost:8000
 make build        # build site into ./site
@@ -58,7 +58,7 @@ One-time setup in the repo settings:
 
 1. Add a Markdown file under `docs/<topic>/`.
 2. Reference it in the `nav` block in [`zensical.toml`](zensical.toml).
-3. Add front-matter, including `tags:` (block-style YAML — flow-style
+3. Add front-matter, including `tags:` (block-style YAML: flow-style
    `[a, b]` collides with Zensical's reference-link parser):
 
    ```yaml

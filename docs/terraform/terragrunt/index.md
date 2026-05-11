@@ -9,24 +9,24 @@ tags:
 # Terragrunt
 
 [Terragrunt](https://terragrunt.gruntwork.io/) is a thin orchestration layer that
-sits on top of Terraform / OpenTofu. It does not replace HCL modules — you still
-write modules the same way — it just removes the copy-paste involved in wiring
+sits on top of Terraform / OpenTofu. It does not replace HCL modules (you still
+write modules the same way); it just removes the copy-paste involved in wiring
 the same module into many environments.
 
 ## What it adds on top of Terraform / OpenTofu
 
-- **DRY remote state** — one `remote_state` block at the root generates the
+- **DRY remote state**: one `remote_state` block at the root generates the
   `backend "s3" {}` for every unit, with the state key derived from the unit's
   path on disk.
-- **DRY provider blocks** — one `generate "provider"` block writes a
+- **DRY provider blocks**: one `generate "provider"` block writes a
   `provider.tf` into every working directory, so units don't repeat
   `provider "aws" { region = ... }` boilerplate.
-- **Dependency graph** — `dependency "vpc" { config_path = "../vpc" }` lets one
+- **Dependency graph**: `dependency "vpc" { config_path = "../vpc" }` lets one
   unit consume another unit's outputs without manual `terraform_remote_state`
   data sources, and Terragrunt sequences applies in topological order.
-- **`run --all`** (formerly `run-all`) — plan/apply/destroy across every unit
+- **`run --all`** (formerly `run-all`): plan/apply/destroy across every unit
   under a directory, respecting the dependency graph.
-- **OpenTofu support** — set `terraform_binary = "tofu"` in `terraform_binary`
+- **OpenTofu support**: set `terraform_binary = "tofu"` in `terraform_binary`
   or via the `TG_TF_PATH` env var to drive `tofu` instead of `terraform`.
 
 ## When to use it
@@ -39,7 +39,7 @@ Reach for Terragrunt when you have:
 - A platform team that wants `cd live/prod && terragrunt run --all plan` to be
   the daily driver.
 
-Skip it for a single-environment, single-state-file project — a plain
+Skip it for a single-environment, single-state-file project: a plain
 `terraform` root with a backend block is simpler.
 
 !!! tip "OpenTofu users"

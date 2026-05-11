@@ -1,6 +1,6 @@
 ---
 title: IAM policy patterns
-description: Least-privilege IAM trust and resource policy snippets — GitHub Actions OIDC, cross-account assume-role with ExternalId, S3 TLS-only and encryption-required bucket policies, and a separated KMS key policy.
+description: Least-privilege IAM trust and resource policy snippets: GitHub Actions OIDC, cross-account assume-role with ExternalId, S3 TLS-only and encryption-required bucket policies, and a separated KMS key policy.
 tags:
   - terraform
   - aws
@@ -78,7 +78,7 @@ You also need the OIDC provider itself once per account:
 resource "aws_iam_openid_connect_provider" "github" {
   url             = "https://token.actions.githubusercontent.com"
   client_id_list  = ["sts.amazonaws.com"]
-  # GitHub publishes thumbprints — let AWS pick them up automatically since
+  # GitHub publishes thumbprints: let AWS pick them up automatically since
   # the 2023-07 change. An empty list works on current provider versions.
   thumbprint_list = []
 }
@@ -349,7 +349,7 @@ resource "aws_kms_key" "this" {
 ```
 
 !!! warning "Don't drop the root statement"
-    AWS will let you save a key policy without the root principal — and then
+    AWS will let you save a key policy without the root principal: and then
     nobody can edit it again. The "EnableIAMUserPermissions" statement is
     your one and only break-glass. Keep it.
 
@@ -359,7 +359,7 @@ resource "aws_kms_key" "this" {
 
 - [AWS: Configuring OIDC for GitHub Actions](https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
 - [AWS: The confused deputy problem and ExternalId](https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html)
-- [AWS: Bucket policy examples — require HTTPS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies.html#example-bucket-policies-secure-transport)
+- [AWS: Bucket policy examples: require HTTPS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies.html#example-bucket-policies-secure-transport)
 - [AWS: Protecting data with SSE-KMS](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html)
 - [AWS: Key policies in AWS KMS](https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html)
 - [Terraform: `aws_iam_policy_document` data source](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document)

@@ -9,7 +9,7 @@ tags:
 # Explicit stacks (terragrunt.stack.hcl)
 
 The **stacks** feature (Terragrunt 0.66+, stable in the 1.0 line) lets you
-declare a bundle of related units — e.g. *vpc + eks + rds + sqs* — in a single
+declare a bundle of related units: e.g. *vpc + eks + rds + sqs*: in a single
 `terragrunt.stack.hcl` file and instantiate it anywhere you want. It replaces
 the traditional pattern of copy-pasting 5–10 unit folders per new environment
 or tenant.
@@ -50,7 +50,7 @@ unit "eks" {
   }
 }
 
-# A nested stack — a stack that pulls in its own units/stacks.
+# A nested stack: a stack that pulls in its own units/stacks.
 stack "service" {
   source = "git::git@github.com:acme/infrastructure-catalog.git//stacks/service?ref=v0.7.0"
   path   = "svc-checkout"
@@ -95,7 +95,7 @@ inputs = {
 }
 ```
 
-`values` is a top-level identifier inside a unit reached via a stack — that's
+`values` is a top-level identifier inside a unit reached via a stack: that's
 how `terragrunt.stack.hcl` plumbs configuration in without each unit needing
 its own per-environment HCL file.
 

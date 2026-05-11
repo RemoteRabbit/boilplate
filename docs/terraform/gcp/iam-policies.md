@@ -1,6 +1,6 @@
 ---
 title: IAM bindings & custom roles
-description: GCP IAM in Terraform — additive vs authoritative bindings, custom roles, Workload Identity Federation for GitHub Actions, and service-account impersonation.
+description: GCP IAM in Terraform: additive vs authoritative bindings, custom roles, Workload Identity Federation for GitHub Actions, and service-account impersonation.
 tags:
   - terraform
   - gcp
@@ -18,9 +18,9 @@ will silently wipe other teams' access. Read this page before you reach for
 
 | Resource family        | Scope                                       | Authoritative?     | Safe default?                         |
 | ---------------------- | ------------------------------------------- | ------------------ | ------------------------------------- |
-| `google_*_iam_member`  | Single (role, member) pair                  | No — additive      | ✅ Yes                                |
-| `google_*_iam_binding` | Whole role (all members for that one role)  | Yes — for the role | ⚠️ Only if Terraform owns *that role* |
-| `google_*_iam_policy`  | The entire resource's IAM policy            | Yes — total        | ❌ Almost never                       |
+| `google_*_iam_member`  | Single (role, member) pair                  | No (additive)      | ✅ Yes                                |
+| `google_*_iam_binding` | Whole role (all members for that one role)  | Yes (for the role) | ⚠️ Only if Terraform owns *that role* |
+| `google_*_iam_policy`  | The entire resource's IAM policy            | Yes (total)        | ❌ Almost never                       |
 
 !!! warning "`google_project_iam_policy` is destructive"
     `google_project_iam_policy` overwrites **every** binding on the project,
@@ -218,7 +218,7 @@ deploy SA says *what they can do*, and rotating one doesn't disturb the other.
 
 ## References
 
-- [google_project_iam_*][gpi-resources] — member vs binding vs policy
+- [google_project_iam_*][gpi-resources]: member vs binding vs policy
 - [google_project_iam_custom_role][gpi-custom-role]
 - [google_iam_workload_identity_pool][wif-pool]
 - [google_iam_workload_identity_pool_provider][wif-provider]

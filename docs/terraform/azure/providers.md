@@ -1,6 +1,6 @@
 ---
 title: Provider configuration
-description: Sensible azurerm + azuread provider defaults for Terraform / OpenTofu — features block, OIDC auth from CI, multi-subscription aliases, and ARM environment variables.
+description: Sensible azurerm + azuread provider defaults for Terraform / OpenTofu: features block, OIDC auth from CI, multi-subscription aliases, and ARM environment variables.
 tags:
   - terraform
   - azure
@@ -14,7 +14,7 @@ Targets **azurerm ≥ 4.0** and **azuread ≥ 3.0**.
 
 !!! note "`features {}` is mandatory"
     The empty `features {}` block is required even when you don't override
-    anything — `terraform validate` will fail without it. Use it to control
+    anything: `terraform validate` will fail without it. Use it to control
     destroy-time behaviours like Key Vault soft-delete recovery and resource
     group force-delete.
 
@@ -93,7 +93,7 @@ The provider tries auth methods in this order: **environment variables →
 managed identity → OIDC → CLI**. Pick exactly one method per environment so
 behaviour stays predictable.
 
-### Local development — Azure CLI
+### Local development: Azure CLI
 
 ```bash
 az login
@@ -104,11 +104,11 @@ az account set --subscription "<your-subscription-id>"
 provider "azurerm" {
   features {}
   # subscription_id is read from the CLI context if omitted.
-  use_cli = true   # default — shown for clarity
+  use_cli = true   # default: shown for clarity
 }
 ```
 
-### CI — GitHub Actions OIDC
+### CI: GitHub Actions OIDC
 
 ```hcl
 provider "azurerm" {
@@ -142,7 +142,7 @@ jobs:
       - run: terraform apply -auto-approve
 ```
 
-### Self-hosted runners — Managed Identity
+### Self-hosted runners: Managed Identity
 
 ```hcl
 provider "azurerm" {
@@ -187,7 +187,7 @@ provider "azurerm" {
   subscription_id = var.shared_subscription_id
 }
 
-# Workload-subscription resource (default-ish — pick the alias explicitly)
+# Workload-subscription resource (default-ish: pick the alias explicitly)
 resource "azurerm_resource_group" "app" {
   provider = azurerm.workload
   name     = "rg-app-prod"

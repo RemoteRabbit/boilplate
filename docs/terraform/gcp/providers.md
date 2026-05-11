@@ -1,6 +1,6 @@
 ---
 title: Provider configuration
-description: Sensible defaults for the google and google-beta providers — pinning, project/region/zone, user_project_override, ADC vs Workload Identity Federation, aliases, and impersonation.
+description: Sensible defaults for the google and google-beta providers: pinning, project/region/zone, user_project_override, ADC vs Workload Identity Federation, aliases, and impersonation.
 tags:
   - terraform
   - gcp
@@ -79,7 +79,7 @@ provider "google" {
 
 ## Authentication
 
-### Local development — Application Default Credentials
+### Local development: Application Default Credentials
 
 ```bash
 gcloud auth application-default login
@@ -89,7 +89,7 @@ gcloud config set project acme-platform-dev
 The provider picks up ADC automatically. No `credentials = ...` argument,
 no JSON key on disk.
 
-### CI — Workload Identity Federation (no keys)
+### CI: Workload Identity Federation (no keys)
 
 In CI, exchange the runner's OIDC token for a short-lived Google token. With
 GitHub Actions:
@@ -207,7 +207,7 @@ provider "google" {
 ```
 
 The caller (you, or the CI SA) only needs `roles/iam.serviceAccountTokenCreator`
-on each deploy SA — nothing else.
+on each deploy SA: nothing else.
 
 ---
 

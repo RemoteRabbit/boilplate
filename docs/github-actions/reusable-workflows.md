@@ -1,6 +1,6 @@
 ---
 title: Reusable workflows
-description: Reusable workflow patterns — inputs, secrets, permissions, and composite actions.
+description: Reusable workflow patterns: inputs, secrets, permissions, and composite actions.
 status: stub
 tags:
   - github-actions

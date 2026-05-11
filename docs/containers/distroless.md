@@ -13,6 +13,6 @@ tags:
 
 ## Planned content
 
-- gcr.io/distroless/* — language-specific bases
-- cgr.dev/chainguard — wolfi-based, frequently rebuilt
+- gcr.io/distroless/*: language-specific bases
+- cgr.dev/chainguard: wolfi-based, frequently rebuilt
 - Debugging distroless (`:debug` tag, ephemeral containers)

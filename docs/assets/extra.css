@@ -1,5 +1,5 @@
 /* ==========================================================================
-   boilplate — muted dark-grey + sage-green palette
+   boilplate: muted dark-grey + sage-green palette
    ========================================================================== */
 
 /* Brand greens */
@@ -17,7 +17,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Light mode — warm off-white with sage accents
+   Light mode: warm off-white with sage accents
    -------------------------------------------------------------------------- */
 [data-md-color-scheme="default"] {
   --md-primary-fg-color:        var(--bp-green-500);
@@ -44,7 +44,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Dark mode — warm dark grey with sage accents
+   Dark mode: warm dark grey with sage accents
    -------------------------------------------------------------------------- */
 [data-md-color-scheme="slate"] {
   --md-hue: 200;
@@ -77,7 +77,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Header polish — solid muted bar in dark mode (no harsh primary stripe)
+   Header polish: solid muted bar in dark mode (no harsh primary stripe)
    -------------------------------------------------------------------------- */
 [data-md-color-scheme="slate"] .md-header {
   background-color: #1a1d20;
@@ -114,7 +114,7 @@
 [data-md-color-scheme="default"] .md-tabs__link--active { color: var(--bp-green-600); }
 
 /* --------------------------------------------------------------------------
-   Code blocks — slightly inset, subtle border, monospaced clarity
+   Code blocks: slightly inset, subtle border, monospaced clarity
    -------------------------------------------------------------------------- */
 .md-typeset pre > code,
 .md-typeset .highlight pre {
@@ -138,7 +138,7 @@
   padding: 0.1em 0.35em;
 }
 
-/* Copy button — subtler */
+/* Copy button: subtler */
 .md-clipboard {
   color: var(--md-default-fg-color--lighter);
 }
@@ -164,7 +164,7 @@
   padding-bottom: 0.3em;
 }
 
-/* Links — accent on hover */
+/* Links: accent on hover */
 .md-typeset a {
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -176,7 +176,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Admonitions / callouts — quieter colors that fit the palette
+   Admonitions / callouts: quieter colors that fit the palette
    -------------------------------------------------------------------------- */
 [data-md-color-scheme="slate"] .md-typeset .admonition,
 [data-md-color-scheme="slate"] .md-typeset details {
@@ -191,7 +191,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Tables — calmer, no zebra fight with the bg
+   Tables: calmer, no zebra fight with the bg
    -------------------------------------------------------------------------- */
 .md-typeset table:not([class]) {
   border: 1px solid var(--md-default-fg-color--lightest);
@@ -204,7 +204,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Search box — no harsh primary background
+   Search box: no harsh primary background
    -------------------------------------------------------------------------- */
 [data-md-color-scheme="slate"] .md-search__form {
   background-color: #22262a;
@@ -220,7 +220,15 @@
 }
 
 /* --------------------------------------------------------------------------
-   Footer — muted, no jarring color block
+   Page tags: breathing room above the tag chips so they don't butt up
+   against the article content.
+   -------------------------------------------------------------------------- */
+nav.md-tags {
+  margin-top: 2.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Footer: muted, no jarring color block
    -------------------------------------------------------------------------- */
 .md-footer-meta {
   background-color: #0f1214;

@@ -1,6 +1,6 @@
 ---
 title: Provider configuration
-description: Production defaults for the AWS Terraform / OpenTofu provider — version pinning, default_tags, assume_role, retries, multi-region aliases, and OIDC for GitHub Actions.
+description: Production defaults for the AWS Terraform / OpenTofu provider: version pinning, default_tags, assume_role, retries, multi-region aliases, and OIDC for GitHub Actions.
 tags:
   - terraform
   - aws
@@ -168,7 +168,7 @@ terraform {
 ## OIDC + GitHub Actions (`assume_role_with_web_identity`)
 
 Inside a GitHub Actions runner, exchange the workflow's OIDC token for AWS
-credentials — no static keys, no `aws-actions/configure-aws-credentials`
+credentials: no static keys, no `aws-actions/configure-aws-credentials`
 env-var dance required by Terraform itself.
 
 ```hcl

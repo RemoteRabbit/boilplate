@@ -1,6 +1,6 @@
 ---
 title: RBAC role assignments
-description: Azure RBAC patterns for Terraform — built-in role assignments, custom role definitions, and federated CI identities (OIDC) for GitHub Actions.
+description: Azure RBAC patterns for Terraform: built-in role assignments, custom role definitions, and federated CI identities (OIDC) for GitHub Actions.
 tags:
   - terraform
   - azure
@@ -15,7 +15,7 @@ or resource). The binding itself is an `azurerm_role_assignment`.
 
 !!! tip "Prefer built-in roles"
     Microsoft maintains 200+ [built-in roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles).
-    Reach for a custom role only when no built-in role fits — custom roles
+    Reach for a custom role only when no built-in role fits: custom roles
     are scoped to one tenant and harder to audit.
 
 ## Built-in role assignment

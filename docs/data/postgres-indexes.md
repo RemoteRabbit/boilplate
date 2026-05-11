@@ -1,6 +1,6 @@
 ---
 title: Postgres indexing & partitioning
-description: When and how to add indexes — B-tree, partial, GIN, and covering indexes.
+description: When and how to add indexes: B-tree, partial, GIN, and covering indexes.
 status: stub
 tags:
   - data
@@ -14,7 +14,7 @@ tags:
 
 ## Planned content
 
-- Composite indexes — column order rules
+- Composite indexes: column order rules
 - Partial indexes
 - GIN indexes for jsonb / array / full-text
 - Range partitioning by time + pg_partman

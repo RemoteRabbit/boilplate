@@ -1,4 +1,4 @@
-# boilplate — local dev convenience targets
+# boilplate: local dev convenience targets
 # Run `make help` to see what's available.
 #
 # All Python work is done through `uv`, which manages the .venv automatically.
