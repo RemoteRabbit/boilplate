@@ -22,7 +22,8 @@ variable "project_id" { # (1)!
     error_message = <<-EOT
       Variable `project_id` must start with a lowercase letter, be 6–30 chars, and contain only lowercase
       letters, digits, or hyphens (no trailing hyphen).
-    EOT # (6)!
+    EOT
+    # (6)!
   }
 }
 ```
