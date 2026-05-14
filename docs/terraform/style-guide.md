@@ -34,8 +34,8 @@ lowercase with only letters and underscores.
 for multiline detailed descriptions.
 3. Be explicit when it comes to variable types. If it is a map or object be diligent with marking that in the type along
 with its internal types.
-4. All variables should have at least one level of validation. Even if it is a simple variable that is always set in a
-vars file. Typos and mistakes happen. Validation catches that ahead of time.
+4. All variables should have at least one level of validation, excluding variables of type `bool`. Even if it is a
+simple variable that is always set in a vars file. Typos and mistakes happen. Validation catches that ahead of time.
 5. Create a condition that is as strict to the type and desired state of the variable without it becoming its own
 project to manage. Strict enough to catch real mistakes, loose enough not to require updating every time the
 upstream naming rules shift.
