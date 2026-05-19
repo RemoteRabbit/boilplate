@@ -10,7 +10,7 @@ authors = [{ name = "RemoteRabbit" }]
 dependencies = [
     # Zensical replaces mkdocs + mkdocs-material (built by the same team).
     # Pinned to a known-good alpha; bump deliberately.
-    "zensical==0.0.41",
+    "zensical==0.0.43",
     "pymdown-extensions>=10.17.1,<12.0",
     # Note: git-revision-date-localized and htmlproofer plugins are not yet
     # supported by Zensical (alpha, Phase 1). Link-checking is handled by the
